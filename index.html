@@ -8,20 +8,60 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#f4f4f0;color:#1a1a18}
 a{color:inherit;text-decoration:none}
+
+/* NAV */
 .nav{background:#003F2D;padding:0 2rem;display:flex;align-items:center;gap:2rem;position:sticky;top:0;z-index:100;flex-wrap:wrap}
 .nav-logo{color:#fff;font-size:15px;font-weight:500;padding:1rem 0;letter-spacing:0.04em;white-space:nowrap}
 .nav-link{color:rgba(255,255,255,0.65);font-size:12px;padding:1rem 0;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap}
 .nav-link:hover,.nav-link.active{color:#fff;border-bottom-color:rgba(255,255,255,0.5)}
-.section{padding:3rem 2rem;max-width:1040px;margin:0 auto}
-.section+.section{border-top:1px solid rgba(0,0,0,0.07)}
-.section-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A8C5A;margin-bottom:0.5rem}
-.section-title{font-size:22px;font-weight:500;color:#003F2D;margin-bottom:0.5rem;line-height:1.3}
-.section-sub{font-size:14px;color:#555;line-height:1.7;max-width:680px;margin-bottom:2rem}
+
+/* HERO */
 .hero{background:#003F2D;padding:4rem 2rem 3rem;text-align:center}
 .hero h1{color:#fff;font-size:28px;font-weight:500;letter-spacing:-0.01em;margin-bottom:0.75rem}
 .hero p{color:rgba(255,255,255,0.65);font-size:15px;max-width:600px;margin:0 auto 2rem;line-height:1.7}
 .hero-chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .chip{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);font-size:12px;padding:5px 14px;border-radius:20px;border:0.5px solid rgba(255,255,255,0.2)}
+
+/* SECTIONS */
+.section{padding:3rem 2rem;max-width:1040px;margin:0 auto}
+.section+.section{border-top:1px solid rgba(0,0,0,0.07)}
+.section-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A8C5A;margin-bottom:0.5rem}
+.section-title{font-size:22px;font-weight:500;color:#003F2D;margin-bottom:0.5rem;line-height:1.3}
+.section-sub{font-size:14px;color:#555;line-height:1.7;max-width:680px;margin-bottom:2rem}
+
+/* NARRATIVE STYLES */
+.narrative-block{max-width:720px}
+.narrative-block p{font-size:15px;line-height:1.8;color:#2a2a28;margin-bottom:1.25rem}
+.narrative-block p:last-child{margin-bottom:0}
+.pull-quote{border-left:3px solid #003F2D;padding:1rem 1.5rem;margin:2rem 0;background:#f0f4f2;border-radius:0 8px 8px 0}
+.pull-quote p{font-size:16px;font-style:italic;color:#003F2D;line-height:1.7;margin:0}
+.method-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:1.5rem;margin-bottom:1rem}
+.method-card-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#8A8C5A;margin-bottom:0.35rem}
+.method-card-title{font-size:16px;font-weight:500;color:#003F2D;margin-bottom:0.75rem}
+.method-card-body{font-size:13px;line-height:1.7;color:#444}
+.method-card-body p{margin-bottom:0.75rem}
+.method-card-body ul{padding-left:16px;margin-bottom:0.75rem}
+.method-card-body li{margin-bottom:5px}
+.method-card-collapse{font-size:12px;font-weight:600;color:#003F2D;margin-top:0.5rem;padding:6px 12px;border:0.5px solid #003F2D;border-radius:20px;cursor:pointer;background:transparent;display:inline-block}
+.method-card-collapse:hover{background:#003F2D;color:#fff}
+.collapses{font-size:12px;font-weight:500;color:#888;border-top:0.5px solid rgba(0,0,0,0.06);margin-top:1rem;padding-top:0.75rem}
+.three-lanes{display:grid;grid-template-columns:1fr;gap:1px;border-radius:10px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.08);margin:2rem 0}
+.lane-block{padding:1.25rem 1.5rem}
+.lane-block-top{background:#003F2D}
+.lane-block-mid{background:#f4f4f0;border-top:1px solid rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.06)}
+.lane-block-bot{background:#4a4a40}
+.lane-block-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem}
+.lane-block-title{font-size:15px;font-weight:500;margin-bottom:0.4rem}
+.lane-block-body{font-size:13px;line-height:1.6}
+.lane-on-dark .lane-block-label{color:rgba(255,255,255,0.5)}
+.lane-on-dark .lane-block-title{color:#fff}
+.lane-on-dark .lane-block-body{color:rgba(255,255,255,0.7)}
+.lane-on-light .lane-block-label{color:#8A8C5A}
+.lane-on-light .lane-block-title{color:#003F2D}
+.lane-on-light .lane-block-body{color:#555}
+.lane-gap-note{font-size:13px;font-weight:500;color:#435E6B;background:#EEF1F5;border:0.5px solid #435E6B;border-radius:6px;padding:8px 14px;display:inline-block;margin-top:1rem}
+
+/* SWIM DIAGRAM */
 .swim-diagram{display:flex;flex-direction:column;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.08)}
 .swim-row{padding:1.25rem 1.5rem}
 .swim-row-top{background:#003F2D}
@@ -37,17 +77,24 @@ a{color:inherit;text-decoration:none}
 .swim-arrow{padding:6px 1.5rem;background:#f4f4f0;display:flex;justify-content:space-between;align-items:center}
 .swim-arrow-line{flex:1;height:1px;background:rgba(0,0,0,0.1);margin:0 8px}
 .swim-arrow-label{font-size:10px;color:#888;letter-spacing:0.06em}
-.artifact-table{width:100%;border-collapse:collapse}
-.artifact-table th{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:8px 14px;text-align:left;border-bottom:2px solid #003F2D}
-.artifact-table th:first-child{color:#555;border-bottom-color:rgba(0,0,0,0.15)}
-.artifact-table th:nth-child(2){color:#888;border-bottom-color:#ccc}
-.artifact-table th:nth-child(3){color:#003F2D;border-bottom-color:#003F2D}
-.artifact-table td{font-size:13px;padding:10px 14px;border-bottom:0.5px solid rgba(0,0,0,0.06);vertical-align:top;line-height:1.5}
-.artifact-table tr:last-child td{border-bottom:none}
-.artifact-table tr:hover td{background:rgba(0,63,45,0.03)}
-.artifact-table td:first-child{font-weight:500;color:#444;width:160px}
-.artifact-table td:nth-child(2){color:#888;font-style:italic}
-.artifact-table td:nth-child(3){color:#003F2D;font-weight:500}
+
+/* ACCORDIONS */
+.acc-group{display:flex;flex-direction:column;gap:8px}
+.acc{border-radius:8px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.1)}
+.acc-head{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;background:#fff;user-select:none}
+.acc-head:hover{background:#fafaf8}
+.acc-title{font-size:14px;font-weight:500;color:#1a1a18}
+.acc-sub{font-size:12px;color:#888;margin-top:2px}
+.chevron{width:16px;height:16px;flex-shrink:0;transition:transform 0.2s;margin-left:12px;color:#ccc}
+.chevron.open{transform:rotate(180deg)}
+.acc-body{font-size:13px;line-height:1.7;padding:0 16px;max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s;background:#fafaf8;color:#333}
+.acc-body.open{max-height:1000px;padding:14px 16px}
+.acc-body ul{padding-left:16px;margin-top:6px}
+.acc-body li{margin-bottom:4px}
+.acc-body p{margin-bottom:8px}
+.tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:6px;vertical-align:middle}
+
+/* ROLES */
 .role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .role-card{border-radius:8px;overflow:hidden}
 .role-head{padding:10px 14px}
@@ -57,42 +104,36 @@ a{color:inherit;text-decoration:none}
 .old-card{background:#f5f5f0;border:0.5px solid #ddd;border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
 .old-card-name{font-size:13px;font-weight:500;color:#555}
 .old-card-note{font-size:11px;color:#999;font-style:italic}
-.acc-group{display:flex;flex-direction:column;gap:8px}
-.acc{border-radius:8px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.1)}
-.acc-head{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;background:#fff;user-select:none}
-.acc-head:hover{background:#fafaf8}
-.acc-title{font-size:14px;font-weight:500;color:#1a1a18}
-.acc-sub{font-size:12px;color:#888;margin-top:2px}
-.chevron{width:16px;height:16px;flex-shrink:0;transition:transform 0.2s;margin-left:12px;color:#ccc}
-.chevron.open{transform:rotate(180deg)}
-.acc-body{font-size:13px;line-height:1.7;padding:0 16px;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.2s;background:#fafaf8;color:#333}
-.acc-body.open{max-height:1000px;padding:14px 16px}
-.acc-body ul{padding-left:16px;margin-top:6px}
-.acc-body li{margin-bottom:4px}
-.acc-body p{margin-bottom:8px}
-.tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:6px;vertical-align:middle}
-.req-filter{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.req-filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;cursor:pointer;transition:all 0.15s;color:#555}
-.req-filter-btn:hover{border-color:#003F2D;color:#003F2D}
-.req-filter-btn.active{background:#003F2D;color:#fff;border-color:#003F2D}
+
+/* REQUIREMENTS */
 .req-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1.5rem}
 .req-stat{background:#fff;border-radius:8px;padding:12px 14px;border:0.5px solid rgba(0,0,0,0.08);text-align:center}
 .req-stat-num{font-size:22px;font-weight:500;color:#003F2D}
 .req-stat-label{font-size:11px;color:#888;margin-top:2px}
+.req-filter{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.req-filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;cursor:pointer;transition:all 0.15s;color:#555}
+.req-filter-btn:hover{border-color:#003F2D;color:#003F2D}
+.req-filter-btn.active{background:#003F2D;color:#fff;border-color:#003F2D}
+
+/* FOOTER */
 .page-footer{background:#003F2D;padding:2rem;margin-top:4rem;text-align:center}
 .page-footer p{color:rgba(255,255,255,0.5);font-size:12px}
 .page-footer strong{color:rgba(255,255,255,0.85)}
+
 @media(max-width:640px){
   .swim-cards{grid-template-columns:1fr}
   .role-grid{grid-template-columns:1fr}
   .req-stats{grid-template-columns:repeat(2,1fr)}
+  .method-card{padding:1rem}
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav class="nav">
   <div class="nav-logo">Polaris</div>
+  <span class="nav-link" onclick="scrollTo('argument')">The argument</span>
   <span class="nav-link" onclick="scrollTo('framework')">Framework</span>
   <span class="nav-link" onclick="scrollTo('artifacts')">Artifacts</span>
   <span class="nav-link" onclick="scrollTo('resourcing')">Resourcing</span>
@@ -100,6 +141,7 @@ a{color:inherit;text-decoration:none}
   <span class="nav-link" onclick="scrollTo('requirements')">Requirements</span>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <h1>From legacy artifacts to operational intelligence</h1>
   <p>A sequenced program for re-imagining how real estate organizations capture, activate, and operationalize their data &mdash; built for the age of AI agents, not audit cycles.</p>
@@ -111,11 +153,93 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- 01 FRAMEWORK -->
+<!-- 00: THE ARGUMENT -->
+<div class="section" id="argument">
+  <div class="section-label">00 &middot; The argument</div>
+  <div class="section-title">The old procurement motion is broken. Here&rsquo;s what replaces it.</div>
+
+  <div class="narrative-block">
+    <p>Historically, companies would hire a consulting firm to perform an assessment &mdash; detailed discovery interviews, documented functional requirements, translated to technical features, drafted into a request for information or proposal, run the vendor process, discovered the gaps that still needed to be built in-house, then run another process to find a partner to fill those gaps. Months and months pass. Once a solution is scoped and selected, the initial requirements have shifted. The process was designed for a world where building was slow and language was the only instrument of alignment.</p>
+
+    <p>That world is gone. In the age of AI, vibe coding, and forward-deployed engineers, the fundamental constraint has changed. Infrastructure that used to take six months to prototype now takes days. The bottleneck is no longer build speed &mdash; it&rsquo;s clarity. And clarity cannot be manufactured through a requirements document. It has to be discovered through working software.</p>
+  </div>
+
+  <div class="pull-quote">
+    <p>The prototype is not a deliverable. It&rsquo;s a discovery instrument. The moment stakeholders react to working software instead of answering abstract questions, you learn more in one hour than six weeks of interviews would surface.</p>
+  </div>
+
+  <!-- Two new methods -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2rem">
+
+    <div class="method-card">
+      <div class="method-card-label">New motion 01</div>
+      <div class="method-card-title">Prototype-first discovery</div>
+      <div class="method-card-body">
+        <p>Instead of documenting requirements, build a working skeleton in days using vibe coding tools and forward-deployed engineers, then use it as the discovery instrument.</p>
+        <ul>
+          <li>A small team (1&ndash;2 engineers + 1 domain expert) builds a functional mock against real data from one asset, wiring a few core workflows, surfacing the most contested questions in the interface itself</li>
+          <li>Stakeholders react to working software instead of answering abstract questions</li>
+          <li>The prototype becomes the RFP &mdash; you ask vendors &ldquo;can you match or extend this?&rdquo; not &ldquo;can you interpret this 40-page spec?&rdquo;</li>
+        </ul>
+        <div class="collapses">What this collapses: the entire discovery &rarr; requirements &rarr; RFP translation chain. That chain exists because language is lossy. Code is not.</div>
+      </div>
+    </div>
+
+    <div class="method-card">
+      <div class="method-card-label">New motion 02</div>
+      <div class="method-card-title">Capability audit inversion</div>
+      <div class="method-card-body">
+        <p>The traditional process starts with what users say they need. The new motion starts with what the data reveals is actually happening.</p>
+        <ul>
+          <li>Before any vendor conversation, run a structured data audit using an AI layer &mdash; connect to Yardi, MRI, Excel, SharePoint, email &mdash; extract signal about where operational friction lives, where decisions stall, where reconciliation fails</li>
+          <li>The output is not a requirements document. It&rsquo;s a capability gap map grounded in actual data flows, not stated preferences</li>
+          <li>This becomes the anchor for every vendor conversation: &ldquo;here is our data reality, show us what you can do with it&rdquo;</li>
+        </ul>
+        <div class="collapses">What this collapses: the &ldquo;we need a consultant to tell us what we need&rdquo; loop.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The three lanes narrative -->
+  <div class="section-title" style="font-size:18px;margin-bottom:1rem">The three lanes and why the middle is the only unsolved one</div>
+
+  <div class="three-lanes">
+    <div class="lane-block lane-block-top lane-on-dark">
+      <div class="lane-block-label">Top lane &middot; has a craft tradition</div>
+      <div class="lane-block-title">Asset managers, portfolio managers, investor relations</div>
+      <div class="lane-block-body">Their vocabulary is outcomes: protect yield, reduce leakage, win the next fund raise. They don&rsquo;t think in data. They think in consequences. This discipline is centuries old and well-understood.</div>
+    </div>
+    <div class="lane-block lane-block-mid lane-on-light">
+      <div class="lane-block-label">Middle lane &middot; no craft tradition exists here</div>
+      <div class="lane-block-title">The activation layer &mdash; where the new work lives</div>
+      <div class="lane-block-body">What exists in the middle today is a combination of things that approximate it without naming it: business analysts who write requirements docs, project managers who run implementations, power users who build Excel frankenmodels that become load-bearing infrastructure, consultants who deliver decks that never get operationalized. None of these roles are the thing.</div>
+      <div class="lane-gap-note">This is the actual gap. And it&rsquo;s almost entirely unsolved.</div>
+    </div>
+    <div class="lane-block lane-block-bot lane-on-dark">
+      <div class="lane-block-label">Bottom lane &middot; has a craft tradition</div>
+      <div class="lane-block-title">Database engineers, solutions architects, integration specialists</div>
+      <div class="lane-block-body">People have been doing this work for decades. The tools are mature: Yardi, MRI, APIs, cloud warehouses. The discipline is well-understood even when execution is hard.</div>
+    </div>
+  </div>
+
+  <div class="narrative-block" style="margin-top:2rem">
+    <p>What the middle actually requires is a different kind of practitioner &mdash; someone who can hold all three questions simultaneously: <em>what decision does this data need to drive</em>, <em>how do we get the system to surface that signal reliably</em>, and <em>how do we make that legible to a person who has 90 seconds on a Monday morning.</em></p>
+
+    <p>That&rsquo;s outcome engineering. It&rsquo;s not analytics, it&rsquo;s not PM, it&rsquo;s not data engineering. It&rsquo;s closer to product design for operational workflows &mdash; but specifically in a domain where the stakes of a wrong decision are measured in hundreds of millions of dollars.</p>
+
+    <p>AI and vibe coding lower the floor of the bottom lane dramatically. What used to require a six-month integration project can now be prototyped in days. That compression doesn&rsquo;t eliminate the middle &mdash; it makes it the <em>only remaining constraint</em>. When infrastructure becomes cheap and fast to assemble, the bottleneck becomes: does anyone actually know what it needs to do and for whom?</p>
+
+    <p>That&rsquo;s the design problem. And it&rsquo;s still almost entirely unsolved.</p>
+  </div>
+</div>
+
+<!-- 01: FRAMEWORK -->
 <div class="section" id="framework">
   <div class="section-label">01 &middot; The framework</div>
   <div class="section-title">Three swim lanes. One program.</div>
   <div class="section-sub">Most technology programs fail because they conflate infrastructure with outcome. The three-swim-lane model separates what must be true (technical infrastructure), what must be built (the activation layer), and what the business actually cares about (outcomes) &mdash; and treats each with the discipline it deserves.</div>
+
   <div class="swim-diagram">
     <div class="swim-row swim-row-top">
       <div class="swim-row-label">Top lane</div>
@@ -153,7 +277,7 @@ a{color:inherit;text-decoration:none}
   <p style="font-size:12px;color:#999;margin-top:12px;font-style:italic">The middle lane is the constraint. When infrastructure becomes fast and cheap to assemble, the bottleneck becomes: does anyone know what it needs to do and for whom?</p>
 </div>
 
-<!-- 02 ARTIFACTS -->
+<!-- 02: ARTIFACTS -->
 <div class="section" id="artifacts">
   <div class="section-label">02 &middot; Artifact re-imagination</div>
   <div class="section-title">What organizations have vs. what agents need</div>
@@ -246,7 +370,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- 03 RESOURCING -->
+<!-- 03: RESOURCING -->
 <div class="section" id="resourcing">
   <div class="section-label">03 &middot; Resourcing model</div>
   <div class="section-title">New roles, not the old org chart with new titles</div>
@@ -286,7 +410,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- 04 PROGRAM -->
+<!-- 04: PROGRAM -->
 <div class="section" id="program">
   <div class="section-label">04 &middot; Program structure</div>
   <div class="section-title">Three gates, not one big bang</div>
@@ -305,7 +429,7 @@ a{color:inherit;text-decoration:none}
   </div>
 
   <div style="padding:8px 0;margin-bottom:8px">
-    <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517">
+    <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517;flex-wrap:wrap">
       <div style="width:10px;height:10px;border-radius:50%;background:#BA7517;flex-shrink:0"></div>
       <div style="font-size:13px;color:#633806;font-weight:500">Gate 1 &middot; Proceed / pivot / stop</div>
       <div style="font-size:12px;color:#854F0B;margin-left:auto">Evidence: working prototype + pilot cohort reaction &mdash; not a deck</div>
@@ -325,7 +449,7 @@ a{color:inherit;text-decoration:none}
   </div>
 
   <div style="padding:8px 0;margin-bottom:8px">
-    <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517">
+    <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517;flex-wrap:wrap">
       <div style="width:10px;height:10px;border-radius:50%;background:#BA7517;flex-shrink:0"></div>
       <div style="font-size:13px;color:#633806;font-weight:500">Gate 2 &middot; Expand / contract</div>
       <div style="font-size:12px;color:#854F0B;margin-left:auto">Evidence: adoption rate + decision accuracy across pilot cohort</div>
@@ -351,7 +475,7 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- 05 REQUIREMENTS -->
+<!-- 05: REQUIREMENTS -->
 <div class="section" id="requirements">
   <div class="section-label">05 &middot; Solution requirements register</div>
   <div class="section-title">Lease &amp; Space Strategy &mdash; MVP requirements</div>
@@ -364,7 +488,7 @@ a{color:inherit;text-decoration:none}
     <div class="req-stat"><div class="req-stat-num">5</div><div class="req-stat-label">Functional type</div></div>
   </div>
 
-  <div class="req-filter" id="req-filter">
+  <div class="req-filter">
     <button class="req-filter-btn active" onclick="filterReqs('all',this)">All (9)</button>
     <button class="req-filter-btn" onclick="filterReqs('mvp',this)">MVP only (8)</button>
     <button class="req-filter-btn" onclick="filterReqs('data',this)">Data type (4)</button>
@@ -374,242 +498,54 @@ a{color:inherit;text-decoration:none}
   <div class="acc-group" id="req-list">
 
     <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-001</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
-          </div>
-          <div class="acc-title">Current Rent Roll</div>
-          <div class="acc-sub">What is my current income profile and near-term roll risk?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see a current rent roll so I can track income and exposure at the asset level.&rdquo;</div>
-        <p>Full rent roll display per asset including tenant name, suite, SF, base rent, recoveries, lease start/end, options.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI (rent roll extract); lease abstracts</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Rent roll table; WALT / WALE metrics; expiry schedule</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS, JDE, Proda, Prophia, Cherre DSP</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Confirm Yardi vs MRI as system of record per client</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-001</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span></div><div class="acc-title">Current Rent Roll</div><div class="acc-sub">What is my current income profile and near-term roll risk?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see a current rent roll so I can track income and exposure at the asset level.&rdquo;</div><p>Full rent roll display per asset including tenant name, suite, SF, base rent, recoveries, lease start/end, options.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI (rent roll extract); lease abstracts</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Rent roll table; WALT / WALE metrics; expiry schedule</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS, JDE, Proda, Prophia, Cherre DSP</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Confirm Yardi vs MRI as system of record per client</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-002</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
-          </div>
-          <div class="acc-title">Lease Expiry Schedule Analysis</div>
-          <div class="acc-sub">Which tenants do I need to act on in the next 18 months?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see upcoming lease roll so I can plan retention and leasing strategies before income is at risk.&rdquo;</div>
-        <p>Visual timeline of lease expirations by SF and % of GLA. Flag leases expiring within 12, 24, 36 months. Show concentration risk.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI lease data; VTS pipeline</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Expiry waterfall chart; roll % by year; at-risk revenue ($)</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, JDE</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Define threshold for &lsquo;at-risk&rsquo; flagging &mdash; recommend 12-month window</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-002</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span></div><div class="acc-title">Lease Expiry Schedule Analysis</div><div class="acc-sub">Which tenants do I need to act on in the next 18 months?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see upcoming lease roll so I can plan retention and leasing strategies before income is at risk.&rdquo;</div><p>Visual timeline of lease expirations by SF and % of GLA. Flag leases expiring within 12, 24, 36 months. Show concentration risk.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI lease data; VTS pipeline</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Expiry waterfall chart; roll % by year; at-risk revenue ($)</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, JDE</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Define threshold for &lsquo;at-risk&rsquo; flagging &mdash; recommend 12-month window</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-003</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
-          </div>
-          <div class="acc-title">Interactive Stacking Plan</div>
-          <div class="acc-sub">Is a proposed deal feasible given existing rights and layout?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to visualize space occupancy and embedded rights so I can evaluate leasing decisions and identify conflicts.&rdquo;</div>
-        <p>Floor-by-floor visual stacking plan with tenant names, SF, lease term, and embedded rights (ROFO, ROFR, options). Click-through to lease clause.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; CAD/floor plan data; Yardi / MRI</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Interactive stacking plan; embedded rights overlay</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Yardi, custom build</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">ROFO/ROFR highlighting is critical differentiator per workshop</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-003</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span></div><div class="acc-title">Interactive Stacking Plan</div><div class="acc-sub">Is a proposed deal feasible given existing rights and layout?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to visualize space occupancy and embedded rights so I can evaluate leasing decisions and identify conflicts.&rdquo;</div><p>Floor-by-floor visual stacking plan with tenant names, SF, lease term, and embedded rights (ROFO, ROFR, options). Click-through to lease clause.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; CAD/floor plan data; Yardi / MRI</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Interactive stacking plan; embedded rights overlay</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Yardi, custom build</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">ROFO/ROFR highlighting is critical differentiator per workshop</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-004</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
-          </div>
-          <div class="acc-title">Lease Abstract Repository &amp; Query</div>
-          <div class="acc-sub">What contractual obligations or rights exist across my portfolio?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to query lease clauses across assets so I can surface portfolio-wide rights and obligations quickly.&rdquo;</div>
-        <p>Centralized lease abstract storage with ability to query across portfolio (e.g., &lsquo;show all ROFRs expiring in 18 months&rsquo;, &lsquo;show all co-tenancy clauses&rsquo;).</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Source lease PDFs; abstracted data (Yardi, MRI, lease abstraction tools)</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Clause-level search results; critical date alerts</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Prophia, Palantir</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">AI abstraction can accelerate &mdash; needs human review layer for trust</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-004</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span></div><div class="acc-title">Lease Abstract Repository &amp; Query</div><div class="acc-sub">What contractual obligations or rights exist across my portfolio?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to query lease clauses across assets so I can surface portfolio-wide rights and obligations quickly.&rdquo;</div><p>Centralized lease abstract storage with ability to query across portfolio (e.g., &lsquo;show all ROFRs expiring in 18 months&rsquo;, &lsquo;show all co-tenancy clauses&rsquo;).</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Source lease PDFs; abstracted data (Yardi, MRI, lease abstraction tools)</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Clause-level search results; critical date alerts</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Prophia, Palantir</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">AI abstraction can accelerate &mdash; needs human review layer for trust</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-005</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
-          </div>
-          <div class="acc-title">Lease Critical Date Tracking &amp; Alerts</div>
-          <div class="acc-sub">Am I at risk of missing a contractual deadline?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to be alerted to upcoming lease critical dates so I never miss an exercise or notice window.&rdquo;</div>
-        <p>Track and alert on all lease critical dates: options, ROFO/ROFR exercise windows, rent step dates, kick-out clauses, co-tenancy thresholds, expiry.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; Yardi / MRI critical date fields</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Critical date calendar; alert notifications; expired vs upcoming status</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Must link alert back to source lease clause &mdash; trust requirement</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-005</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span></div><div class="acc-title">Lease Critical Date Tracking &amp; Alerts</div><div class="acc-sub">Am I at risk of missing a contractual deadline?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to be alerted to upcoming lease critical dates so I never miss an exercise or notice window.&rdquo;</div><p>Track and alert on all lease critical dates: options, ROFO/ROFR exercise windows, rent step dates, kick-out clauses, co-tenancy thresholds, expiry.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; Yardi / MRI critical date fields</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Critical date calendar; alert notifications; expired vs upcoming status</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Must link alert back to source lease clause &mdash; trust requirement</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-006</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
-          </div>
-          <div class="acc-title">Leasing Pipeline &amp; Deal Tracking</div>
-          <div class="acc-sub">What is the probability and timing of my next executed lease?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need visibility into the leasing pipeline so I can assess forward occupancy and income trajectory.&rdquo;</div>
-        <p>Track active leasing prospects: prospect name, SF, deal stage, probability, proposed rent, TI, timing. Integrate with VTS where available.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">VTS; broker reporting; internal leasing team inputs</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Pipeline summary; projected occupancy change; TI commitment exposure</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Salesforce</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">VTS integration is standard &mdash; confirm client-specific broker data flows</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-006</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span></div><div class="acc-title">Leasing Pipeline &amp; Deal Tracking</div><div class="acc-sub">What is the probability and timing of my next executed lease?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need visibility into the leasing pipeline so I can assess forward occupancy and income trajectory.&rdquo;</div><p>Track active leasing prospects: prospect name, SF, deal stage, probability, proposed rent, TI, timing. Integrate with VTS where available.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">VTS; broker reporting; internal leasing team inputs</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Pipeline summary; projected occupancy change; TI commitment exposure</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Salesforce</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">VTS integration is standard &mdash; confirm client-specific broker data flows</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-007</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
-          </div>
-          <div class="acc-title">Leasing Statistics &amp; Benchmarks</div>
-          <div class="acc-sub">How is my leasing performance tracking vs. market?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need leasing KPIs benchmarked against the market so I can assess portfolio competitiveness.&rdquo;</div>
-        <p>WALT, WALE, NER, net absorption, leasing spreads, occupancy vs submarket. Link to CBRE EA / CoStar benchmarks.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI; VTS; CoStar; CBRE EA</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Leasing KPI dashboard; market comp table</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, VTS, CoStar, CBRE EA, Compstak</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">OPX / CBRE EA benchmarking is a key CBRE differentiator &mdash; highlight</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-007</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span></div><div class="acc-title">Leasing Statistics &amp; Benchmarks</div><div class="acc-sub">How is my leasing performance tracking vs. market?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need leasing KPIs benchmarked against the market so I can assess portfolio competitiveness.&rdquo;</div><p>WALT, WALE, NER, net absorption, leasing spreads, occupancy vs submarket. Link to CBRE EA / CoStar benchmarks.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI; VTS; CoStar; CBRE EA</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Leasing KPI dashboard; market comp table</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, VTS, CoStar, CBRE EA, Compstak</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">OPX / CBRE EA benchmarking is a key CBRE differentiator &mdash; highlight</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="no" data-type="data" style="border-left:3px solid #ccc">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-008</span>
-            <span style="background:#e8e8e0;color:#888;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Post-MVP</span>
-            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
-          </div>
-          <div class="acc-title">Amenity Space Engagement Tracking</div>
-          <div class="acc-sub">Are building amenities driving tenant engagement and supporting leasing competitiveness?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see which amenities are being used and which are not so I can inform capital decisions and differentiate the asset in leasing conversations.&rdquo;</div>
-        <p>Track utilization of shared amenity spaces using IoT, booking systems, or sensor data. Benchmark amenity usage against building occupancy. Surface underperforming amenities as a leasing competitiveness signal.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">IoT sensors; amenity booking platforms (HqO, Equiem, Comfy); building management systems</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Amenity utilization % by space type; booking rate trends; underperforming amenity flag</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">CBRE Host, HqO, Equiem, REKalibrate, custom IoT</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Requires amenity booking platform integration or IoT overlay</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-008</span><span style="background:#e8e8e0;color:#888;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Post-MVP</span><span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span></div><div class="acc-title">Amenity Space Engagement Tracking</div><div class="acc-sub">Are building amenities driving tenant engagement and supporting leasing competitiveness?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see which amenities are being used and which are not so I can inform capital decisions and differentiate the asset in leasing conversations.&rdquo;</div><p>Track utilization of shared amenity spaces using IoT, booking systems, or sensor data. Benchmark amenity usage against building occupancy. Surface underperforming amenities as a leasing competitiveness signal.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">IoT sensors; amenity booking platforms (HqO, Equiem, Comfy); building management systems</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Amenity utilization % by space type; booking rate trends; underperforming amenity flag</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">CBRE Host, HqO, Equiem, REKalibrate, custom IoT</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Requires amenity booking platform integration or IoT overlay</div></div></div>
     </div>
 
     <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
-      <div class="acc-head" onclick="tog(this)">
-        <div style="flex:1">
-          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
-            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-009</span>
-            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
-            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
-          </div>
-          <div class="acc-title">Access Control &amp; Keycard Data Integration (Kastle)</div>
-          <div class="acc-sub">Is tenant activity increasing, stable, or declining &mdash; and is a drop-off an early warning sign?</div>
-        </div>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-      </div>
-      <div class="acc-body">
-        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need keycard access data so I can understand actual building and suite usage patterns, particularly for assets where IoT sensors are not installed.&rdquo;</div>
-        <p>Ingest keycard / access control data from Kastle or equivalent. Show entry frequency by tenant suite, floor, and time of day. Flag significant drops in access activity as an early tenant risk signal.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Kastle access control system (API); HID / Lenel / other access control platforms; badge event logs</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Access frequency by tenant / suite / floor; time-of-day heatmap; anomaly / drop-off alert</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Kastle, HID, Lenel, custom</div></div>
-          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
-        </div>
-        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Data availability depends on Kastle contract and client permission. Primary utilization proxy for non-IoT assets.</div></div>
-      </div>
+      <div class="acc-head" onclick="tog(this)"><div style="flex:1"><div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px"><span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-009</span><span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span><span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span></div><div class="acc-title">Access Control &amp; Keycard Data Integration (Kastle)</div><div class="acc-sub">Is tenant activity increasing, stable, or declining &mdash; and is a drop-off an early warning sign?</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need keycard access data so I can understand actual building and suite usage patterns, particularly for assets where IoT sensors are not installed.&rdquo;</div><p>Ingest keycard / access control data from Kastle or equivalent. Show entry frequency by tenant suite, floor, and time of day. Flag significant drops in access activity as an early tenant risk signal.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px"><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Kastle access control system (API); HID / Lenel / other access control platforms; badge event logs</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Access frequency by tenant / suite / floor; time-of-day heatmap; anomaly / drop-off alert</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Kastle, HID, Lenel, custom</div></div><div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div></div><div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Data availability depends on Kastle contract and client permission. Primary utilization proxy for non-IoT assets.</div></div></div>
     </div>
 
   </div>
 </div>
 
+<!-- FOOTER -->
 <div class="page-footer">
   <p><strong>Polaris</strong> &middot; Operational Intelligence Framework &middot; Built for CBRE Asset Management</p>
   <p style="margin-top:6px">Small &middot; Medium &middot; Large &mdash; directionally indicative &middot; Requirements: Lease &amp; Space Strategy v1.0</p>
@@ -626,7 +562,7 @@ function scrollTo(id){
   var el=document.getElementById(id);
   if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
 }
-function filterReqs(filter, btn){
+function filterReqs(filter,btn){
   document.querySelectorAll('.req-filter-btn').forEach(function(b){b.classList.remove('active')});
   btn.classList.add('active');
   document.querySelectorAll('.req-card').forEach(function(card){
@@ -638,7 +574,7 @@ function filterReqs(filter, btn){
   });
 }
 window.addEventListener('scroll',function(){
-  var sections=['framework','artifacts','resourcing','program','requirements'];
+  var sections=['argument','framework','artifacts','resourcing','program','requirements'];
   var links=document.querySelectorAll('.nav-link');
   var current='';
   sections.forEach(function(id){
