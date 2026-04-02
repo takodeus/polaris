@@ -8,28 +8,20 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,sans-serif;background:#f4f4f0;color:#1a1a18}
 a{color:inherit;text-decoration:none}
-
-/* NAV */
-.nav{background:#003F2D;padding:0 2rem;display:flex;align-items:center;gap:2rem;position:sticky;top:0;z-index:100}
-.nav-logo{color:#fff;font-size:15px;font-weight:500;padding:1rem 0;letter-spacing:0.04em}
+.nav{background:#003F2D;padding:0 2rem;display:flex;align-items:center;gap:2rem;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.nav-logo{color:#fff;font-size:15px;font-weight:500;padding:1rem 0;letter-spacing:0.04em;white-space:nowrap}
 .nav-link{color:rgba(255,255,255,0.65);font-size:12px;padding:1rem 0;cursor:pointer;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;white-space:nowrap}
 .nav-link:hover,.nav-link.active{color:#fff;border-bottom-color:rgba(255,255,255,0.5)}
-
-/* SECTIONS */
 .section{padding:3rem 2rem;max-width:1040px;margin:0 auto}
 .section+.section{border-top:1px solid rgba(0,0,0,0.07)}
 .section-label{font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#8A8C5A;margin-bottom:0.5rem}
 .section-title{font-size:22px;font-weight:500;color:#003F2D;margin-bottom:0.5rem;line-height:1.3}
 .section-sub{font-size:14px;color:#555;line-height:1.7;max-width:680px;margin-bottom:2rem}
-
-/* HERO */
 .hero{background:#003F2D;padding:4rem 2rem 3rem;text-align:center}
 .hero h1{color:#fff;font-size:28px;font-weight:500;letter-spacing:-0.01em;margin-bottom:0.75rem}
 .hero p{color:rgba(255,255,255,0.65);font-size:15px;max-width:600px;margin:0 auto 2rem;line-height:1.7}
 .hero-chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .chip{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);font-size:12px;padding:5px 14px;border-radius:20px;border:0.5px solid rgba(255,255,255,0.2)}
-
-/* THREE SWIM LANES DIAGRAM */
 .swim-diagram{display:flex;flex-direction:column;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.08)}
 .swim-row{padding:1.25rem 1.5rem}
 .swim-row-top{background:#003F2D}
@@ -42,11 +34,9 @@ a{color:inherit;text-decoration:none}
 .swim-card{background:rgba(255,255,255,0.1);border:0.5px solid rgba(255,255,255,0.2);border-radius:8px;padding:10px 12px}
 .swim-card-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:3px}
 .swim-card-sub{font-size:11px;color:rgba(255,255,255,0.6);line-height:1.4}
-.swim-arrow{text-align:right;padding:6px 1.5rem;background:#f4f4f0;display:flex;justify-content:space-between;align-items:center}
-.swim-arrow-line{flex:1;height:1px;background:rgba(0,0,0,0.1);margin:0 8px;position:relative}
+.swim-arrow{padding:6px 1.5rem;background:#f4f4f0;display:flex;justify-content:space-between;align-items:center}
+.swim-arrow-line{flex:1;height:1px;background:rgba(0,0,0,0.1);margin:0 8px}
 .swim-arrow-label{font-size:10px;color:#888;letter-spacing:0.06em}
-
-/* OLD vs NEW TABLE */
 .artifact-table{width:100%;border-collapse:collapse}
 .artifact-table th{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:8px 14px;text-align:left;border-bottom:2px solid #003F2D}
 .artifact-table th:first-child{color:#555;border-bottom-color:rgba(0,0,0,0.15)}
@@ -58,38 +48,15 @@ a{color:inherit;text-decoration:none}
 .artifact-table td:first-child{font-weight:500;color:#444;width:160px}
 .artifact-table td:nth-child(2){color:#888;font-style:italic}
 .artifact-table td:nth-child(3){color:#003F2D;font-weight:500}
-.arrow-cell{text-align:center;font-size:16px;color:#ccc;width:32px;padding:10px 0}
-
-/* RESOURCING */
 .role-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .role-card{border-radius:8px;overflow:hidden}
 .role-head{padding:10px 14px}
 .role-body{font-size:12px;line-height:1.6;padding:10px 14px}
 .role-body ul{padding-left:14px}
 .role-body li{margin-bottom:3px}
-.old-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:8px;margin-bottom:1.5rem}
 .old-card{background:#f5f5f0;border:0.5px solid #ddd;border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
 .old-card-name{font-size:13px;font-weight:500;color:#555}
 .old-card-note{font-size:11px;color:#999;font-style:italic}
-
-/* GANTT */
-.gantt-wrap{overflow-x:auto}
-.gantt{min-width:640px}
-.gantt-header{display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:0;margin-bottom:4px}
-.gantt-col-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;padding:4px 8px;text-align:center}
-.gantt-col-label:first-child{text-align:left}
-.gantt-row{display:grid;grid-template-columns:120px 1fr 1fr 1fr;gap:0;margin-bottom:6px;align-items:start}
-.gantt-lane-label{font-size:11px;font-weight:600;color:#fff;padding:8px 10px;border-radius:6px 0 0 6px;display:flex;align-items:center;min-height:36px}
-.gantt-cell{padding:4px 4px;min-height:36px}
-.gantt-bar{border-radius:4px;padding:5px 8px;font-size:11px;font-weight:500;line-height:1.3;height:100%;display:flex;align-items:center}
-.gantt-bar-cm{background:#E8F0EC;color:#003F2D;border:0.5px solid #003F2D}
-.gantt-bar-act{background:#EEF1F5;color:#2B4C5E;border:0.5px solid #435E6B}
-.gantt-bar-tech{background:#F5F4EC;color:#4a4a20;border:0.5px solid #8A8C5A}
-.gantt-bar-gate{background:#FEF3E2;color:#633806;border:0.5px solid #BA7517;font-size:10px;justify-content:center;text-align:center}
-.gantt-section-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;padding:12px 0 4px;grid-column:1/-1}
-.gantt-divider{grid-column:1/-1;height:1px;background:rgba(0,0,0,0.06);margin:4px 0}
-
-/* ACCORDIONS */
 .acc-group{display:flex;flex-direction:column;gap:8px}
 .acc{border-radius:8px;overflow:hidden;border:0.5px solid rgba(0,0,0,0.1)}
 .acc-head{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;background:#fff;user-select:none}
@@ -99,57 +66,40 @@ a{color:inherit;text-decoration:none}
 .chevron{width:16px;height:16px;flex-shrink:0;transition:transform 0.2s;margin-left:12px;color:#ccc}
 .chevron.open{transform:rotate(180deg)}
 .acc-body{font-size:13px;line-height:1.7;padding:0 16px;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.2s;background:#fafaf8;color:#333}
-.acc-body.open{max-height:800px;padding:14px 16px}
+.acc-body.open{max-height:1000px;padding:14px 16px}
 .acc-body ul{padding-left:16px;margin-top:6px}
 .acc-body li{margin-bottom:4px}
 .acc-body p{margin-bottom:8px}
 .tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-right:4px;margin-bottom:6px;vertical-align:middle}
-
-/* SWIM LANE PROGRAM */
-.prog-swim{display:flex;flex-direction:column;gap:4px}
-.prog-row{display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:stretch}
-.prog-label-cell{display:flex;align-items:center;justify-content:flex-end;padding-right:8px}
-.prog-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:right;line-height:1.3}
-.prog-label-cm{color:#003F2D}
-.prog-label-act{color:#435E6B}
-.prog-label-tech{color:#8A8C5A}
-.prog-tracks{display:grid;gap:6px}
-.prog-track{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
-.prog-item{border-radius:6px;padding:8px 10px;font-size:11px;font-weight:500;line-height:1.3}
-.prog-item-cm{background:#E8F0EC;color:#003F2D;border:0.5px solid #c8ddd3}
-.prog-item-act{background:#EEF1F5;color:#2B4C5E;border:0.5px solid #c8d4de}
-.prog-item-tech{background:#F5F4EC;color:#4a4a20;border:0.5px solid #d8d8c0}
-.prog-item-gate{background:#FEF3E2;color:#633806;border:0.5px solid #f0c070;text-align:center;font-size:10px}
-.prog-item-span2{grid-column:span 2}
-.prog-item-span3{grid-column:span 3}
-.prog-phase-header{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:2px}
-.prog-phase-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#888;text-align:center;padding:4px 0;border-bottom:1px solid rgba(0,0,0,0.08)}
-.seq-note{font-size:10px;color:#999;font-style:italic;margin-top:4px;text-align:right}
-
-/* FOOTER */
+.req-filter{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.req-filter-btn{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;cursor:pointer;transition:all 0.15s;color:#555}
+.req-filter-btn:hover{border-color:#003F2D;color:#003F2D}
+.req-filter-btn.active{background:#003F2D;color:#fff;border-color:#003F2D}
+.req-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1.5rem}
+.req-stat{background:#fff;border-radius:8px;padding:12px 14px;border:0.5px solid rgba(0,0,0,0.08);text-align:center}
+.req-stat-num{font-size:22px;font-weight:500;color:#003F2D}
+.req-stat-label{font-size:11px;color:#888;margin-top:2px}
 .page-footer{background:#003F2D;padding:2rem;margin-top:4rem;text-align:center}
 .page-footer p{color:rgba(255,255,255,0.5);font-size:12px}
 .page-footer strong{color:rgba(255,255,255,0.85)}
-
 @media(max-width:640px){
   .swim-cards{grid-template-columns:1fr}
   .role-grid{grid-template-columns:1fr}
-  .gantt-header,.gantt-row{grid-template-columns:90px 1fr 1fr 1fr}
+  .req-stats{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-logo">Polaris</div>
   <span class="nav-link" onclick="scrollTo('framework')">Framework</span>
   <span class="nav-link" onclick="scrollTo('artifacts')">Artifacts</span>
   <span class="nav-link" onclick="scrollTo('resourcing')">Resourcing</span>
   <span class="nav-link" onclick="scrollTo('program')">Program</span>
+  <span class="nav-link" onclick="scrollTo('requirements')">Requirements</span>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <h1>From legacy artifacts to operational intelligence</h1>
   <p>A sequenced program for re-imagining how real estate organizations capture, activate, and operationalize their data &mdash; built for the age of AI agents, not audit cycles.</p>
@@ -161,213 +111,115 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- SECTION 1: FRAMEWORK -->
+<!-- 01 FRAMEWORK -->
 <div class="section" id="framework">
   <div class="section-label">01 &middot; The framework</div>
   <div class="section-title">Three swim lanes. One program.</div>
   <div class="section-sub">Most technology programs fail because they conflate infrastructure with outcome. The three-swim-lane model separates what must be true (technical infrastructure), what must be built (the activation layer), and what the business actually cares about (outcomes) &mdash; and treats each with the discipline it deserves.</div>
-
-  <!-- Swim lane diagram -->
   <div class="swim-diagram">
-    <!-- Business outcomes -->
     <div class="swim-row swim-row-top">
       <div class="swim-row-label">Top lane</div>
       <div class="swim-row-title">Business outcomes</div>
       <div class="swim-row-sub">What the operator actually cares about &mdash; not a dashboard, not a new tool, not a new workflow</div>
       <div class="swim-cards">
-        <div class="swim-card">
-          <div class="swim-card-title">Deploy capital faster</div>
-          <div class="swim-card-sub">Reduce time-to-close</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Protect NOI</div>
-          <div class="swim-card-sub">Catch risk before it lands</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Investor confidence</div>
-          <div class="swim-card-sub">Reporting that earns trust</div>
-        </div>
+        <div class="swim-card"><div class="swim-card-title">Deploy capital faster</div><div class="swim-card-sub">Reduce time-to-close</div></div>
+        <div class="swim-card"><div class="swim-card-title">Protect NOI</div><div class="swim-card-sub">Catch risk before it lands</div></div>
+        <div class="swim-card"><div class="swim-card-title">Investor confidence</div><div class="swim-card-sub">Reporting that earns trust</div></div>
       </div>
     </div>
-
-    <div class="swim-arrow">
-      <span class="swim-arrow-label">signal &uarr;</span>
-      <span class="swim-arrow-line"></span>
-      <span class="swim-arrow-label">&darr; intent</span>
-    </div>
-
-    <!-- Activation layer -->
+    <div class="swim-arrow"><span class="swim-arrow-label">signal &uarr;</span><span class="swim-arrow-line"></span><span class="swim-arrow-label">&darr; intent</span></div>
     <div class="swim-row swim-row-mid">
       <div class="swim-row-label">Middle lane &middot; where the new work lives</div>
       <div class="swim-row-title">The activation layer</div>
       <div class="swim-row-sub">Translating data reality into operational intelligence. No craft tradition exists here yet &mdash; this is the gap.</div>
       <div class="swim-cards">
-        <div class="swim-card">
-          <div class="swim-card-title">Outcome engineering</div>
-          <div class="swim-card-sub">Map data signals to decisions, not reports</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Workflow activation</div>
-          <div class="swim-card-sub">Trigger the right action for the right person</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Trust architecture</div>
-          <div class="swim-card-sub">Make the black box legible and auditable</div>
-        </div>
+        <div class="swim-card"><div class="swim-card-title">Outcome engineering</div><div class="swim-card-sub">Map data signals to decisions, not reports</div></div>
+        <div class="swim-card"><div class="swim-card-title">Workflow activation</div><div class="swim-card-sub">Trigger the right action for the right person</div></div>
+        <div class="swim-card"><div class="swim-card-title">Trust architecture</div><div class="swim-card-sub">Make the black box legible and auditable</div></div>
       </div>
     </div>
-
-    <div class="swim-arrow">
-      <span class="swim-arrow-label">signal &uarr;</span>
-      <span class="swim-arrow-line"></span>
-      <span class="swim-arrow-label">&darr; data</span>
-    </div>
-
-    <!-- Technical infrastructure -->
+    <div class="swim-arrow"><span class="swim-arrow-label">signal &uarr;</span><span class="swim-arrow-line"></span><span class="swim-arrow-label">&darr; data</span></div>
     <div class="swim-row swim-row-bot">
       <div class="swim-row-label">Bottom lane</div>
       <div class="swim-row-title">Technical infrastructure</div>
       <div class="swim-row-sub">The foundation &mdash; necessary but not sufficient. The activation layer consumes it; the business never sees it.</div>
       <div class="swim-cards">
-        <div class="swim-card">
-          <div class="swim-card-title">Ontology &amp; data</div>
-          <div class="swim-card-sub">Entity resolution, schema, meaning</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Integration hub</div>
-          <div class="swim-card-sub">Yardi, MRI, Excel, APIs</div>
-        </div>
-        <div class="swim-card">
-          <div class="swim-card-title">Front end / UX</div>
-          <div class="swim-card-sub">Interface as operating room</div>
-        </div>
+        <div class="swim-card"><div class="swim-card-title">Ontology &amp; data</div><div class="swim-card-sub">Entity resolution, schema, meaning</div></div>
+        <div class="swim-card"><div class="swim-card-title">Integration hub</div><div class="swim-card-sub">Yardi, MRI, Excel, APIs</div></div>
+        <div class="swim-card"><div class="swim-card-title">Front end / UX</div><div class="swim-card-sub">Interface as operating room</div></div>
       </div>
     </div>
   </div>
-
   <p style="font-size:12px;color:#999;margin-top:12px;font-style:italic">The middle lane is the constraint. When infrastructure becomes fast and cheap to assemble, the bottleneck becomes: does anyone know what it needs to do and for whom?</p>
 </div>
 
-<!-- SECTION 2: ARTIFACTS -->
+<!-- 02 ARTIFACTS -->
 <div class="section" id="artifacts">
   <div class="section-label">02 &middot; Artifact re-imagination</div>
   <div class="section-title">What organizations have vs. what agents need</div>
   <div class="section-sub">Every artifact in a real estate organization was built for a reviewer, an auditor, or a regulator. None were built for a machine that must act on them. The shift from audit-era to agent-era requires re-meaning every artifact &mdash; not just reformatting it.</div>
-
   <div class="acc-group">
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Data readiness &mdash; audit-ready &ne; agent-ready</div>
-          <div class="acc-sub">The most fundamental shift in the entire program</div>
-        </div>
+        <div><div class="acc-title">Data readiness &mdash; audit-ready &ne; agent-ready</div><div class="acc-sub">The most fundamental shift in the entire program</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
         <table style="width:100%;border-collapse:collapse">
-          <tr>
-            <th style="font-size:11px;font-weight:600;color:#888;text-align:left;padding:4px 8px 8px;text-transform:uppercase;letter-spacing:0.06em">Today</th>
-            <th style="width:24px"></th>
-            <th style="font-size:11px;font-weight:600;color:#003F2D;text-align:left;padding:4px 8px 8px;text-transform:uppercase;letter-spacing:0.06em">Must become</th>
-          </tr>
-          <tr>
-            <td style="padding:6px 8px;color:#888;font-size:13px">Audit-ready data &mdash; traceable, complete, defensible to a regulator</td>
-            <td style="text-align:center;color:#ccc">&rarr;</td>
-            <td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Agent-ready data &mdash; structured for inference, grounded, decision-scoped</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 8px;color:#888;font-size:13px">Data lineage &mdash; where did this number come from?</td>
-            <td style="text-align:center;color:#ccc">&rarr;</td>
-            <td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Decision lineage &mdash; why did the system recommend this action?</td>
-          </tr>
-          <tr>
-            <td style="padding:6px 8px;color:#888;font-size:13px">Definition of data &mdash; what a field is called and how it&rsquo;s typed</td>
-            <td style="text-align:center;color:#ccc">&rarr;</td>
-            <td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Meaning of data &mdash; what a value implies in context, for whom</td>
-          </tr>
+          <tr><th style="font-size:11px;font-weight:600;color:#888;text-align:left;padding:4px 8px 8px;text-transform:uppercase;letter-spacing:0.06em">Today</th><th style="width:24px"></th><th style="font-size:11px;font-weight:600;color:#003F2D;text-align:left;padding:4px 8px 8px;text-transform:uppercase;letter-spacing:0.06em">Must become</th></tr>
+          <tr><td style="padding:6px 8px;color:#888;font-size:13px">Audit-ready data &mdash; traceable, complete, defensible to a regulator</td><td style="text-align:center;color:#ccc">&rarr;</td><td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Agent-ready data &mdash; structured for inference, grounded, decision-scoped</td></tr>
+          <tr><td style="padding:6px 8px;color:#888;font-size:13px">Data lineage &mdash; where did this number come from?</td><td style="text-align:center;color:#ccc">&rarr;</td><td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Decision lineage &mdash; why did the system recommend this action?</td></tr>
+          <tr><td style="padding:6px 8px;color:#888;font-size:13px">Definition of data &mdash; what a field is called and how it&rsquo;s typed</td><td style="text-align:center;color:#ccc">&rarr;</td><td style="padding:6px 8px;color:#003F2D;font-size:13px;font-weight:500">Meaning of data &mdash; what a value implies in context, for whom</td></tr>
         </table>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Taxonomies &amp; data dictionaries</div>
-          <div class="acc-sub">Hierarchical labels &rarr; nodes and edges</div>
-        </div>
+        <div><div class="acc-title">Taxonomies &amp; data dictionaries &mdash; labels &rarr; nodes and edges</div><div class="acc-sub">Hierarchy is a tree. Agents need a graph.</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
         <p>A taxonomy feels structured &mdash; it has hierarchy, categories, controlled vocabulary. But hierarchy is a tree, and trees are one-dimensional relationships. What an agent needs is a graph: this asset class relates to this risk profile relates to this approval threshold relates to this reporting obligation.</p>
-        <p>The moment you add a second dimension of relationship, a taxonomy becomes an ontology, and the work required multiplies by an order of magnitude. Organizations that try to feed a flat taxonomy to an agent will get agents that confidently traverse the wrong paths.</p>
-        <ul>
-          <li><strong>Today:</strong> Classification trees &mdash; static, categorical, maintained in Excel or a data dictionary</li>
-          <li><strong>Must become:</strong> Traversable graph with weighted relationships &mdash; machine-readable, queryable, version-controlled</li>
-        </ul>
+        <p>The moment you add a second dimension of relationship, a taxonomy becomes an ontology, and the work required multiplies by an order of magnitude. Organizations that feed a flat taxonomy to an agent will get agents that confidently traverse the wrong paths.</p>
+        <ul><li><strong>Today:</strong> Classification trees &mdash; static, categorical, maintained in Excel or a data dictionary</li><li><strong>Must become:</strong> Traversable graph with weighted relationships &mdash; machine-readable, queryable, version-controlled</li></ul>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Ontologies</div>
-          <div class="acc-sub">Entity model &rarr; people-in-the-loop context diagram</div>
-        </div>
+        <div><div class="acc-title">Ontologies &mdash; entity model &rarr; people-in-the-loop context diagram</div><div class="acc-sub">Who touches each entity, when, with what authority</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
-        <p>Most enterprise ontologies are built by data architects working from system schemas. They capture what entities exist and how they relate technically. They do not capture who touches each entity, in what context, under what authority, and for what purpose.</p>
+        <p>Most enterprise ontologies capture what entities exist and how they relate technically. They do not capture who touches each entity, in what context, under what authority, and for what purpose.</p>
         <p>An agent-ready ontology must include the human layer: the asset manager who reviews this entity every Monday, the approval threshold above which the CFO is required, the context that makes a given data value meaningful vs. noise.</p>
-        <ul>
-          <li><strong>Today:</strong> Assets, funds, entities &mdash; typed and related in a schema</li>
-          <li><strong>Must become:</strong> People-in-the-loop context diagrams &mdash; who touches each entity, when, why, and with what authority</li>
-        </ul>
+        <ul><li><strong>Today:</strong> Assets, funds, entities &mdash; typed and related in a schema</li><li><strong>Must become:</strong> People-in-the-loop context diagrams &mdash; who touches each entity, when, why, and with what authority</li></ul>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Policies &amp; procedures</div>
-          <div class="acc-sub">Documented rules &rarr; decision hierarchies with lineage</div>
-        </div>
+        <div><div class="acc-title">Policies &amp; procedures &mdash; documented rules &rarr; decision hierarchies with lineage</div><div class="acc-sub">An agent cannot exercise discretion. It needs explicit branch conditions.</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
         <p>A policy document is written in natural language, optimized for human interpretation, deliberately ambiguous at the edges to give practitioners discretion. An agent cannot exercise discretion &mdash; it needs a decision tree with explicit branch conditions, thresholds, exception paths, and escalation triggers.</p>
-        <p>Rewriting a policy as a decision hierarchy forces the organization to answer questions it has never had to make explicit: what does &ldquo;material&rdquo; mean exactly? What is the threshold at which CFO approval is required? The artifact transformation reveals governance gaps that were previously hidden in discretion.</p>
-        <ul>
-          <li><strong>Today:</strong> Written for human compliance &mdash; narrative, interpretable, auditable after the fact</li>
-          <li><strong>Must become:</strong> Machine-executable decision hierarchies &mdash; every branch has a condition, every escalation has a trigger, every outcome is auditable</li>
-        </ul>
+        <p>Rewriting a policy as a decision hierarchy forces the organization to answer questions it has never had to make explicit: what does &ldquo;material&rdquo; mean exactly? What is the threshold at which CFO approval is required? The artifact transformation reveals governance gaps hidden in discretion.</p>
+        <ul><li><strong>Today:</strong> Written for human compliance &mdash; narrative, interpretable, auditable after the fact</li><li><strong>Must become:</strong> Machine-executable decision hierarchies &mdash; every branch has a condition, every escalation has a trigger, every outcome is auditable</li></ul>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Contracts &amp; agreements</div>
-          <div class="acc-sub">Document of record &rarr; active obligation graph</div>
-        </div>
+        <div><div class="acc-title">Contracts &amp; agreements &mdash; document of record &rarr; active obligation graph</div><div class="acc-sub">Clauses as live rules, not PDFs that surface when something lapses</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
         <p>A lease is not just a document &mdash; it is a set of time-triggered obligations, option windows, co-tenancy clauses, and renewal rights that currently live in a PDF and surface only when someone remembers to look, or when they don&rsquo;t and something lapses.</p>
         <p>An active obligation graph means every clause that has a downstream consequence is a live node that can fire. This is not a data problem. It&rsquo;s an epistemology problem &mdash; you have to decide what the contract means operationally before you can encode it.</p>
-        <ul>
-          <li><strong>Today:</strong> Stored, searched when a dispute arises, reviewed at renewal</li>
-          <li><strong>Must become:</strong> Clauses as live rules triggering downstream actions &mdash; expiry alerts, approval workflows, reporting obligations</li>
-        </ul>
+        <ul><li><strong>Today:</strong> Stored, searched when a dispute arises, reviewed at renewal</li><li><strong>Must become:</strong> Clauses as live rules triggering downstream actions &mdash; expiry alerts, approval workflows, reporting obligations</li></ul>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Reporting &amp; KPIs</div>
-          <div class="acc-sub">Static scorecard &rarr; early warning signal system</div>
-        </div>
+        <div><div class="acc-title">Reporting &amp; KPIs &mdash; static scorecard &rarr; early warning signal system</div><div class="acc-sub">From backward-looking measurement to forward-looking prompts</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
@@ -381,33 +233,24 @@ a{color:inherit;text-decoration:none}
         </ul>
       </div>
     </div>
-
     <div class="acc">
       <div class="acc-head" onclick="tog(this)">
-        <div>
-          <div class="acc-title">Workflows &amp; process maps</div>
-          <div class="acc-sub">Steps for humans &rarr; agent orchestration specs</div>
-        </div>
+        <div><div class="acc-title">Workflows &amp; process maps &mdash; steps for humans &rarr; agent orchestration specs</div><div class="acc-sub">Triggers, permissions, escalation paths, and lineage &mdash; all encoded explicitly</div></div>
         <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </div>
       <div class="acc-body">
         <p>Process maps documented for human execution cannot be handed to an agent. They are missing the four things an agent requires: explicit triggers that fire the workflow, permission boundaries at each step, escalation paths when conditions are not met, and decision lineage at every branch point.</p>
-        <ul>
-          <li><strong>Today:</strong> Steps documented for human execution &mdash; narrative, assumed context, discretion at every edge case</li>
-          <li><strong>Must become:</strong> Agent orchestration specs &mdash; triggers, permissions, escalation paths, and lineage encoded explicitly</li>
-        </ul>
+        <ul><li><strong>Today:</strong> Steps documented for human execution &mdash; narrative, assumed context, discretion at every edge case</li><li><strong>Must become:</strong> Agent orchestration specs &mdash; triggers, permissions, escalation paths, and lineage encoded explicitly</li></ul>
       </div>
     </div>
-
   </div>
 </div>
 
-<!-- SECTION 3: RESOURCING -->
+<!-- 03 RESOURCING -->
 <div class="section" id="resourcing">
   <div class="section-label">03 &middot; Resourcing model</div>
   <div class="section-title">New roles, not the old org chart with new titles</div>
   <div class="section-sub">The instinct is to solve a new problem with the old org chart. That&rsquo;s where these programs die. The four archetypes below are not job titles you can post on LinkedIn and fill &mdash; they are skill clusters that currently exist partially, in scattered people who built them through unusual career paths.</div>
-
   <div style="margin-bottom:1.5rem">
     <div style="font-size:12px;font-weight:600;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px">What no longer works</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
@@ -418,133 +261,49 @@ a{color:inherit;text-decoration:none}
       <div class="old-card"><div><div class="old-card-name">Vendor impl. consultant</div><div class="old-card-note">Configures their product, leaves</div></div></div>
     </div>
   </div>
-
   <div style="font-size:12px;font-weight:600;color:#888;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px">What the program actually requires</div>
   <div class="role-grid">
-
     <div class="role-card" style="border:0.5px solid #003F2D">
-      <div class="role-head" style="background:#003F2D">
-        <div style="font-size:14px;font-weight:500;color:#fff">Outcome engineer</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Domain fluency + product thinking</div>
-      </div>
-      <div class="role-body" style="background:#E8F0EC;color:#003F2D">
-        Owns the question: what must this system actually do? Sits at the intersection of asset management knowledge and product design instinct. Probably a former operator who taught themselves to build, or a PM who spent years embedded in real estate.
-        <ul style="margin-top:8px">
-          <li>Translates business outcomes into system behaviors</li>
-          <li>Defines what &ldquo;correct&rdquo; looks like for each decision type</li>
-          <li>Sets the bar for signal vs. noise</li>
-          <li>Validates prototypes with domain operators</li>
-        </ul>
-      </div>
+      <div class="role-head" style="background:#003F2D"><div style="font-size:14px;font-weight:500;color:#fff">Outcome engineer</div><div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Domain fluency + product thinking</div></div>
+      <div class="role-body" style="background:#E8F0EC;color:#003F2D">Owns the question: what must this system actually do? Sits at the intersection of asset management knowledge and product design instinct. Probably a former operator who taught themselves to build, or a PM who spent years embedded in real estate.<ul style="margin-top:8px"><li>Translates business outcomes into system behaviors</li><li>Defines what &ldquo;correct&rdquo; looks like for each decision type</li><li>Sets the bar for signal vs. noise</li><li>Validates prototypes with domain operators</li></ul></div>
     </div>
-
     <div class="role-card" style="border:0.5px solid #435E6B">
-      <div class="role-head" style="background:#435E6B">
-        <div style="font-size:14px;font-weight:500;color:#fff">Knowledge architect</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Ontology + graph + meaning</div>
-      </div>
-      <div class="role-body" style="background:#EEF1F5;color:#1a2e38">
-        Owns: how is reality encoded? Exists most frequently in biotech and defense &mdash; industries that solved this problem earlier. Rare in real estate. Builds the ontology, forces the governance conversations the organization has never had.
-        <ul style="margin-top:8px">
-          <li>Constructs the entity graph and relationship model</li>
-          <li>Forces explicit answers to implicit governance questions</li>
-          <li>Ensures the ontology includes the human context layer</li>
-          <li>Partners with legacy IT to preserve institutional knowledge</li>
-        </ul>
-      </div>
+      <div class="role-head" style="background:#435E6B"><div style="font-size:14px;font-weight:500;color:#fff">Knowledge architect</div><div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Ontology + graph + meaning</div></div>
+      <div class="role-body" style="background:#EEF1F5;color:#1a2e38">Owns: how is reality encoded? Exists most frequently in biotech and defense &mdash; industries that solved this problem earlier. Rare in real estate. Builds the ontology, forces the governance conversations the organization has never had.<ul style="margin-top:8px"><li>Constructs the entity graph and relationship model</li><li>Forces explicit answers to implicit governance questions</li><li>Ensures the ontology includes the human context layer</li><li>Partners with legacy IT to preserve institutional knowledge</li></ul></div>
     </div>
-
     <div class="role-card" style="border:0.5px solid #8A8C5A">
-      <div class="role-head" style="background:#8A8C5A">
-        <div style="font-size:14px;font-weight:500;color:#fff">Forward-deployed engineer</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Full-stack + AI/agent fluency</div>
-      </div>
-      <div class="role-body" style="background:#F5F4EC;color:#2C2C1A">
-        The rarest archetype. Can ship production code and sit across from a CFO and earn their trust in the same week. Owns: build it where the work is. Works embedded in operations, not isolated in engineering.
-        <ul style="margin-top:8px">
-          <li>Produces working prototypes in days, not months</li>
-          <li>Builds against real data from day one</li>
-          <li>Wires agents into actual workflows, not demos</li>
-          <li>Leaves artifacts that the organization can maintain</li>
-        </ul>
-      </div>
+      <div class="role-head" style="background:#8A8C5A"><div style="font-size:14px;font-weight:500;color:#fff">Forward-deployed engineer</div><div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Full-stack + AI/agent fluency</div></div>
+      <div class="role-body" style="background:#F5F4EC;color:#2C2C1A">The rarest archetype. Can ship production code and sit across from a CFO and earn their trust in the same week. Owns: build it where the work is. Works embedded in operations, not isolated in engineering.<ul style="margin-top:8px"><li>Produces working prototypes in days, not months</li><li>Builds against real data from day one</li><li>Wires agents into actual workflows, not demos</li><li>Leaves artifacts that the organization can maintain</li></ul></div>
     </div>
-
     <div class="role-card" style="border:0.5px solid #BA7517">
-      <div class="role-head" style="background:#854F0B">
-        <div style="font-size:14px;font-weight:500;color:#fff">Trust &amp; operations lead</div>
-        <div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Risk + audit + change management</div>
-      </div>
-      <div class="role-body" style="background:#FEF3E2;color:#412402">
-        Owns: does the org actually adopt? Easiest to find because it maps to existing change management and internal audit profiles &mdash; but must be genuinely interested in AI systems, not just governance theater.
-        <ul style="margin-top:8px">
-          <li>Maps stakeholder resistance before it calcifies</li>
-          <li>Designs the trust evidence that makes pilots unfalsifiable</li>
-          <li>Translates agent behavior into language auditors accept</li>
-          <li>Builds the COE that survives the program team</li>
-        </ul>
-      </div>
+      <div class="role-head" style="background:#854F0B"><div style="font-size:14px;font-weight:500;color:#fff">Trust &amp; operations lead</div><div style="font-size:11px;color:rgba(255,255,255,0.65);margin-top:3px">Risk + audit + change management</div></div>
+      <div class="role-body" style="background:#FEF3E2;color:#412402">Owns: does the org actually adopt? Easiest to find because it maps to existing change management and internal audit profiles &mdash; but must be genuinely interested in AI systems, not just governance theater.<ul style="margin-top:8px"><li>Maps stakeholder resistance before it calcifies</li><li>Designs the trust evidence that makes pilots unfalsifiable</li><li>Translates agent behavior into language auditors accept</li><li>Builds the COE that survives the program team</li></ul></div>
     </div>
-
   </div>
-
   <div style="margin-top:1.5rem;padding:14px 16px;background:#f0f4f2;border-radius:8px;border-left:3px solid #003F2D">
     <div style="font-size:13px;font-weight:500;color:#003F2D;margin-bottom:4px">What domain experts do in the new model</div>
-    <div style="font-size:13px;color:#444;line-height:1.6">Domain experts stay essential &mdash; but as validators, not drivers. Their job shifts from defining requirements to stress-testing prototypes. They review working software, not Word documents. And critically: their time must be structurally committed, not &ldquo;we&rsquo;ll find time.&rdquo; The outcome engineers and forward-deployed engineers are useless without two hours of protected access to the head of asset management every week.</div>
+    <div style="font-size:13px;color:#444;line-height:1.6">Domain experts stay essential &mdash; but as validators, not drivers. Their job shifts from defining requirements to stress-testing prototypes. They review working software, not Word documents. And critically: their time must be structurally committed &mdash; not &ldquo;we&rsquo;ll find time.&rdquo;</div>
   </div>
 </div>
 
-<!-- SECTION 4: PROGRAM -->
+<!-- 04 PROGRAM -->
 <div class="section" id="program">
   <div class="section-label">04 &middot; Program structure</div>
   <div class="section-title">Three gates, not one big bang</div>
-  <div class="section-sub">The reason most programs of this kind fail: they are funded as one large initiative with a delivery date 18 months out. By month six, requirements have shifted, the vendor selection looks wrong, and the political will to change course is gone because too much has been committed. Gates force honest evaluation before commitment deepens.</div>
+  <div class="section-sub">The reason most programs of this kind fail: funded as one large initiative with a delivery date 18 months out. By month six, requirements have shifted, the vendor selection looks wrong, and political will to change course is gone. Gates force honest evaluation before commitment deepens.</div>
 
-  <!-- Change management accordion -->
   <div style="margin-bottom:1.5rem">
     <div style="font-size:12px;font-weight:600;color:#003F2D;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1rem;background:#f0f4f2;border-left:3px solid #003F2D;margin-bottom:8px">Change management &middot; starts day one, runs concurrent throughout</div>
     <div class="acc-group">
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Executives &mdash; protect budget + time</div><div class="acc-sub">The sponsor who must become a champion</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p><span class="tag" style="background:#003F2D;color:#fff">Small</span> Frame the burning platform &mdash; not &ldquo;cool technology&rdquo; but &ldquo;cost of waiting another year.&rdquo; What does the organization lose if this decision is deferred 12 months?</p>
-          <p><span class="tag" style="background:#003F2D;color:#fff">Medium</span> Gate discipline: working software at each review, not slides. Protect the team from scope expansion requests before Gate 1 is cleared.</p>
-          <p><span class="tag" style="background:#003F2D;color:#fff">Large</span> Shift from sponsor to champion. When they mention the program unprompted &mdash; in conversations you&rsquo;re not in &mdash; the threshold has been crossed. That moment cannot be manufactured; it can only be earned.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Domain operators &mdash; the people whose work changes</div><div class="acc-sub">Find the willing. Make them unfalsifiable.</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p><span class="tag" style="background:#2C5F4A;color:#fff">Small</span> Find the person who hates their current tool and has credibility. Mid-level, technically curious, slightly frustrated, respected for their workarounds. Not the loudest critic &mdash; the quiet builder.</p>
-          <p><span class="tag" style="background:#2C5F4A;color:#fff">Medium</span> Pilot cohort embedded in live work &mdash; not a lab. Their feedback shapes the artifact re-imagination in real time. They become advocates before the program asks them to be.</p>
-          <p><span class="tag" style="background:#2C5F4A;color:#fff">Large</span> Pilot becomes peer pressure. A room of skeptics watching a colleague do in 10 minutes what used to take 3 days. That moment is more persuasive than any ROI analysis &mdash; and it cannot be faked.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Legacy IT + data &mdash; the team whose stack changes</div><div class="acc-sub">Co-build or they will resist. Give them the keys.</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p><span class="tag" style="background:#435E4A;color:#fff">Small</span> Map who owns what. The person who built the load-bearing Excel &mdash; the one that became the de facto ERP &mdash; is the person who must be made an architect, not a casualty.</p>
-          <p><span class="tag" style="background:#435E4A;color:#fff">Medium</span> Co-build posture: their data gets a better home, not their systems get replaced. Frame it that way and frame it early. Give them authorship of the new stack before they have reason to defend the old one.</p>
-          <p><span class="tag" style="background:#435E4A;color:#fff">Large</span> IT owns the COE. Give them the keys before it feels completely safe. That&rsquo;s how it sticks permanently &mdash; internal ownership, not external dependency.</p>
-        </div>
-      </div>
-
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Executives &mdash; protect budget + time</div><div class="acc-sub">The sponsor who must become a champion</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p><span class="tag" style="background:#003F2D;color:#fff">Small</span> Frame the burning platform &mdash; not &ldquo;cool technology&rdquo; but &ldquo;cost of waiting another year.&rdquo;</p><p><span class="tag" style="background:#003F2D;color:#fff">Medium</span> Gate discipline: working software at each review, not slides. Protect the team from scope expansion before Gate 1 clears.</p><p><span class="tag" style="background:#003F2D;color:#fff">Large</span> Shift from sponsor to champion. When they mention the program unprompted, the threshold has been crossed.</p></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Domain operators &mdash; the people whose work changes</div><div class="acc-sub">Find the willing. Make them unfalsifiable.</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p><span class="tag" style="background:#2C5F4A;color:#fff">Small</span> Find the person who hates their current tool and has credibility. Not the loudest critic &mdash; the quiet builder.</p><p><span class="tag" style="background:#2C5F4A;color:#fff">Medium</span> Pilot cohort embedded in live work &mdash; not a lab. Their feedback shapes the artifact re-imagination in real time.</p><p><span class="tag" style="background:#2C5F4A;color:#fff">Large</span> Pilot becomes peer pressure. A room of skeptics watching a colleague do in 10 minutes what took 3 days. That moment is unfalsifiable.</p></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Legacy IT + data &mdash; the team whose stack changes</div><div class="acc-sub">Co-build or they will resist. Give them the keys.</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p><span class="tag" style="background:#435E4A;color:#fff">Small</span> Map who owns what. The person who built the load-bearing Excel becomes an architect &mdash; not a casualty.</p><p><span class="tag" style="background:#435E4A;color:#fff">Medium</span> Co-build posture: their data gets a better home, not their systems get replaced.</p><p><span class="tag" style="background:#435E4A;color:#fff">Large</span> IT owns the COE. Give them the keys before it feels completely safe. That&rsquo;s how it sticks permanently.</p></div></div>
     </div>
   </div>
 
-  <!-- Gate 1 -->
   <div style="padding:8px 0;margin-bottom:8px">
     <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517">
       <div style="width:10px;height:10px;border-radius:50%;background:#BA7517;flex-shrink:0"></div>
@@ -553,61 +312,18 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 
-  <!-- Activation layer -->
   <div style="margin-bottom:1.5rem">
     <div style="font-size:12px;font-weight:600;color:#435E6B;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1rem;background:#eef0f4;border-left:3px solid #435E6B;margin-bottom:8px">Activation layer &middot; sequential after capability audit; concurrent once prototype is live</div>
     <div class="acc-group">
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Prototype sprint &mdash; working artifact, not a document</div><div class="acc-sub">Sequential: cannot start until capability audit is complete</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Cannot begin without knowing what the data reality actually is. The capability audit is the mandatory prerequisite. Once it completes, the forward-deployed engineer and outcome engineer build a functional mock against real data in days &mdash; not a wireframe, not a demo, actual working software.</p>
-          <p>The prototype becomes the RFP. You ask vendors &ldquo;can you match or extend this?&rdquo; &mdash; not &ldquo;can you interpret this 40-page functional spec?&rdquo; The translation chain that exists because language is lossy gets replaced by code, which is not.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Outcome engineering &mdash; map data to decisions, not reports</div><div class="acc-sub">Concurrent with artifact re-imagination once prototype is live</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <ul>
-            <li>Translate each business outcome into specific system behaviors</li>
-            <li>Define what &ldquo;correct&rdquo; looks like for each decision type the system will touch</li>
-            <li>Set the bar for what constitutes a signal vs. noise for each persona</li>
-            <li>Validate continuously against pilot cohort reactions, not against a requirements document</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Artifact re-imagination &mdash; from audit-ready to agent-ready</div><div class="acc-sub">Concurrent with outcome engineering; feeds the data layer</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Every artifact in scope gets re-examined: policies, taxonomies, KPIs, reporting templates, contracts, org charts. Each one is re-authored for agent operationalizability. This is the work that has no existing craft tradition and cannot be outsourced to a vendor &mdash; it requires the knowledge architect working alongside the domain operator pilot cohort.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Trust architecture &mdash; make the black box legible</div><div class="acc-sub">Concurrent with workflow activation; neither ships without the other</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Agentic systems only get adopted when operators can see why a recommendation was made. Decision lineage must be human-readable, not just machine-auditable. This is the trust and operations lead&rsquo;s primary deliverable during the activation phase &mdash; and it cannot be bolted on after the fact.</p>
-        </div>
-      </div>
-
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Prototype sprint &mdash; working artifact, not a document</div><div class="acc-sub">Sequential: cannot start until capability audit is complete</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p>Cannot begin without knowing what the data reality actually is. Produces a functional mock against real data in days. The prototype becomes the RFP: you ask vendors &ldquo;can you match or extend this?&rdquo; not &ldquo;can you interpret this spec?&rdquo;</p></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Outcome engineering &mdash; map data to decisions, not reports</div><div class="acc-sub">Concurrent with artifact re-imagination once prototype is live</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><ul><li>Translate each business outcome into specific system behaviors</li><li>Define what &ldquo;correct&rdquo; looks like for each decision type</li><li>Set the bar for what constitutes a signal vs. noise for each persona</li><li>Validate continuously against pilot cohort reactions</li></ul></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Trust architecture &mdash; make the black box legible</div><div class="acc-sub">Concurrent with workflow activation; neither ships without the other</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p>Agentic systems only get adopted when operators can see why a recommendation was made. Decision lineage must be human-readable, not just machine-auditable. Cannot be bolted on after the fact.</p></div></div>
     </div>
   </div>
 
-  <!-- Gate 2 -->
   <div style="padding:8px 0;margin-bottom:8px">
     <div style="padding:10px 16px;border-radius:6px;display:flex;align-items:center;gap:10px;background:#FEF3E2;border:0.5px solid #BA7517">
       <div style="width:10px;height:10px;border-radius:50%;background:#BA7517;flex-shrink:0"></div>
@@ -616,77 +332,287 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
 
-  <!-- Technical infrastructure -->
   <div style="margin-bottom:1.5rem">
     <div style="font-size:12px;font-weight:600;color:#8A8C5A;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1rem;background:#f5f5ee;border-left:3px solid #8A8C5A;margin-bottom:8px">Technical infrastructure &middot; capability audit first; all else concurrent once ontology is grounded</div>
     <div class="acc-group">
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Capability audit &mdash; must happen first</div><div class="acc-sub">Everything in the program gates on this. No exceptions.</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Connect to existing systems. Extract signal about where operational friction lives, where decisions stall, where reconciliation fails. Produce a capability gap map grounded in actual data flows &mdash; not stated preferences.</p>
-          <p>This becomes the anchor for every vendor conversation and the foundation for the ontology. It is also the input that makes the prototype sprint possible. Nothing meaningful happens before this.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Ontology + knowledge graph &mdash; entities, edges, meaning</div><div class="acc-sub">Sequential after audit; integration hub runs concurrent</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Taxonomies are trees. Agents need graphs. Building the ontology forces the organization to answer questions it has never had to make explicit. These governance gaps surface here &mdash; and must be resolved, not deferred, because the agent-ready data layer cannot be built until the ontology establishes what entities and relationships exist.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Integration hub &mdash; connect what exists, don&rsquo;t replace it</div><div class="acc-sub">Concurrent with ontology build</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Yardi, MRI, Excel, SharePoint, email &mdash; the sources of operational truth. The integration hub ingests, normalizes, and routes. The ontology determines what fields mean; the hub determines where they come from. These two workstreams run in parallel and converge at the agent-ready data layer.</p>
-        </div>
-      </div>
-
-      <div class="acc">
-        <div class="acc-head" onclick="tog(this)">
-          <div><div class="acc-title">Agent-ready data layer &mdash; structured for inference</div><div class="acc-sub">Sequential after ontology is grounded; concurrent with front end</div></div>
-          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="acc-body">
-          <p>Audit-ready &ne; agent-ready. Data lineage &ne; decision lineage. The data layer must be structured for inference and grounded for decisions: context-scoped, temporally aware, and traceable to the human judgment it encodes. Cannot be built until the ontology establishes what entities and relationships exist and the integration hub surfaces where the data lives.</p>
-        </div>
-      </div>
-
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Capability audit &mdash; must happen first</div><div class="acc-sub">Everything in the program gates on this. No exceptions.</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p>Connect to existing systems. Extract signal about where operational friction lives. Produce a capability gap map grounded in actual data flows &mdash; not stated preferences. Becomes the anchor for every vendor conversation and foundation for the ontology.</p></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Ontology + knowledge graph &mdash; entities, edges, meaning</div><div class="acc-sub">Sequential after audit; integration hub runs concurrent</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p>Taxonomies are trees. Agents need graphs. Building the ontology forces the organization to answer questions it has never had to make explicit. These governance gaps must be resolved here &mdash; the agent-ready data layer cannot be built until this is grounded.</p></div></div>
+      <div class="acc"><div class="acc-head" onclick="tog(this)"><div><div class="acc-title">Integration hub &mdash; connect what exists, don&rsquo;t replace it</div><div class="acc-sub">Concurrent with ontology build</div></div><svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div class="acc-body"><p>Yardi, MRI, Excel, SharePoint, email &mdash; the sources of operational truth. The ontology determines what fields mean; the hub determines where they come from. These two workstreams run in parallel and converge at the agent-ready data layer.</p></div></div>
     </div>
   </div>
 
-  <!-- Scale note -->
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem">
-    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #8A8C5A">
-      <div style="font-size:11px;font-weight:600;color:#8A8C5A;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Small</div>
-      <div style="font-size:12px;color:#555;line-height:1.5">Capability audit + stakeholder mapping + narrative build + prototype sprint. Days to weeks. People-cost dominated. No vendor selection yet.</div>
-    </div>
-    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #435E6B">
-      <div style="font-size:11px;font-weight:600;color:#435E6B;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Medium</div>
-      <div style="font-size:12px;color:#555;line-height:1.5">Ontology v1 + integration hub + artifact re-imagination + pilot cohort + skills bridge. Weeks to a few months. Mix of people and infrastructure cost.</div>
-    </div>
-    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #003F2D">
-      <div style="font-size:11px;font-weight:600;color:#003F2D;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Large</div>
-      <div style="font-size:12px;color:#555;line-height:1.5">Agent-ready data layer + scaled adoption + COE stood up + outcome engineers embedded in OpCos. Several months onward. Mix shifts toward OpEx. ROI measurable.</div>
-    </div>
+    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #8A8C5A"><div style="font-size:11px;font-weight:600;color:#8A8C5A;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Small</div><div style="font-size:12px;color:#555;line-height:1.5">Capability audit + stakeholder mapping + prototype sprint. Days to weeks. People-cost dominated. No vendor selection yet.</div></div>
+    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #435E6B"><div style="font-size:11px;font-weight:600;color:#435E6B;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Medium</div><div style="font-size:12px;color:#555;line-height:1.5">Ontology v1 + integration hub + artifact re-imagination + pilot cohort. Weeks to a few months. Mix of people and infrastructure cost.</div></div>
+    <div style="background:#f5f5f0;border-radius:8px;padding:12px 14px;border-left:3px solid #003F2D"><div style="font-size:11px;font-weight:600;color:#003F2D;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px">Large</div><div style="font-size:12px;color:#555;line-height:1.5">Agent-ready data layer + scaled adoption + COE stood up. Several months onward. Mix shifts to OpEx. ROI measurable.</div></div>
   </div>
-
 </div>
 
-<!-- FOOTER -->
+<!-- 05 REQUIREMENTS -->
+<div class="section" id="requirements">
+  <div class="section-label">05 &middot; Solution requirements register</div>
+  <div class="section-title">Lease &amp; Space Strategy &mdash; MVP requirements</div>
+  <div class="section-sub">8 of 9 requirements are scoped for MVP. Each is anchored to a decision the Asset Manager must make &mdash; not a feature they requested. The register maps data inputs, outputs, possible systems, and open questions for each.</div>
+
+  <div class="req-stats">
+    <div class="req-stat"><div class="req-stat-num">9</div><div class="req-stat-label">Total requirements</div></div>
+    <div class="req-stat"><div class="req-stat-num">8</div><div class="req-stat-label">MVP scope</div></div>
+    <div class="req-stat"><div class="req-stat-num">4</div><div class="req-stat-label">Data type</div></div>
+    <div class="req-stat"><div class="req-stat-num">5</div><div class="req-stat-label">Functional type</div></div>
+  </div>
+
+  <div class="req-filter" id="req-filter">
+    <button class="req-filter-btn active" onclick="filterReqs('all',this)">All (9)</button>
+    <button class="req-filter-btn" onclick="filterReqs('mvp',this)">MVP only (8)</button>
+    <button class="req-filter-btn" onclick="filterReqs('data',this)">Data type (4)</button>
+    <button class="req-filter-btn" onclick="filterReqs('functional',this)">Functional type (5)</button>
+  </div>
+
+  <div class="acc-group" id="req-list">
+
+    <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-001</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
+          </div>
+          <div class="acc-title">Current Rent Roll</div>
+          <div class="acc-sub">What is my current income profile and near-term roll risk?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see a current rent roll so I can track income and exposure at the asset level.&rdquo;</div>
+        <p>Full rent roll display per asset including tenant name, suite, SF, base rent, recoveries, lease start/end, options.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI (rent roll extract); lease abstracts</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Rent roll table; WALT / WALE metrics; expiry schedule</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS, JDE, Proda, Prophia, Cherre DSP</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Confirm Yardi vs MRI as system of record per client</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-002</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
+          </div>
+          <div class="acc-title">Lease Expiry Schedule Analysis</div>
+          <div class="acc-sub">Which tenants do I need to act on in the next 18 months?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see upcoming lease roll so I can plan retention and leasing strategies before income is at risk.&rdquo;</div>
+        <p>Visual timeline of lease expirations by SF and % of GLA. Flag leases expiring within 12, 24, 36 months. Show concentration risk.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI lease data; VTS pipeline</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Expiry waterfall chart; roll % by year; at-risk revenue ($)</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, JDE</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Define threshold for &lsquo;at-risk&rsquo; flagging &mdash; recommend 12-month window</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-003</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
+          </div>
+          <div class="acc-title">Interactive Stacking Plan</div>
+          <div class="acc-sub">Is a proposed deal feasible given existing rights and layout?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to visualize space occupancy and embedded rights so I can evaluate leasing decisions and identify conflicts.&rdquo;</div>
+        <p>Floor-by-floor visual stacking plan with tenant names, SF, lease term, and embedded rights (ROFO, ROFR, options). Click-through to lease clause.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; CAD/floor plan data; Yardi / MRI</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Interactive stacking plan; embedded rights overlay</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Yardi, custom build</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">ROFO/ROFR highlighting is critical differentiator per workshop</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-004</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
+          </div>
+          <div class="acc-title">Lease Abstract Repository &amp; Query</div>
+          <div class="acc-sub">What contractual obligations or rights exist across my portfolio?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to query lease clauses across assets so I can surface portfolio-wide rights and obligations quickly.&rdquo;</div>
+        <p>Centralized lease abstract storage with ability to query across portfolio (e.g., &lsquo;show all ROFRs expiring in 18 months&rsquo;, &lsquo;show all co-tenancy clauses&rsquo;).</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Source lease PDFs; abstracted data (Yardi, MRI, lease abstraction tools)</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Clause-level search results; critical date alerts</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Prophia, Palantir</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">AI abstraction can accelerate &mdash; needs human review layer for trust</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-005</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
+          </div>
+          <div class="acc-title">Lease Critical Date Tracking &amp; Alerts</div>
+          <div class="acc-sub">Am I at risk of missing a contractual deadline?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to be alerted to upcoming lease critical dates so I never miss an exercise or notice window.&rdquo;</div>
+        <p>Track and alert on all lease critical dates: options, ROFO/ROFR exercise windows, rent step dates, kick-out clauses, co-tenancy thresholds, expiry.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Lease abstracts; Yardi / MRI critical date fields</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Critical date calendar; alert notifications; expired vs upcoming status</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, MRI, VTS</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Must link alert back to source lease clause &mdash; trust requirement</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="functional" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-006</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#375623;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Functional</span>
+          </div>
+          <div class="acc-title">Leasing Pipeline &amp; Deal Tracking</div>
+          <div class="acc-sub">What is the probability and timing of my next executed lease?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need visibility into the leasing pipeline so I can assess forward occupancy and income trajectory.&rdquo;</div>
+        <p>Track active leasing prospects: prospect name, SF, deal stage, probability, proposed rent, TI, timing. Integrate with VTS where available.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">VTS; broker reporting; internal leasing team inputs</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Pipeline summary; projected occupancy change; TI commitment exposure</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">VTS, Salesforce</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">VTS integration is standard &mdash; confirm client-specific broker data flows</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-007</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
+          </div>
+          <div class="acc-title">Leasing Statistics &amp; Benchmarks</div>
+          <div class="acc-sub">How is my leasing performance tracking vs. market?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need leasing KPIs benchmarked against the market so I can assess portfolio competitiveness.&rdquo;</div>
+        <p>WALT, WALE, NER, net absorption, leasing spreads, occupancy vs submarket. Link to CBRE EA / CoStar benchmarks.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Yardi / MRI; VTS; CoStar; CBRE EA</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Leasing KPI dashboard; market comp table</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Yardi, VTS, CoStar, CBRE EA, Compstak</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Client / LP / Investor</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">OPX / CBRE EA benchmarking is a key CBRE differentiator &mdash; highlight</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="no" data-type="data" style="border-left:3px solid #ccc">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-008</span>
+            <span style="background:#e8e8e0;color:#888;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Post-MVP</span>
+            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
+          </div>
+          <div class="acc-title">Amenity Space Engagement Tracking</div>
+          <div class="acc-sub">Are building amenities driving tenant engagement and supporting leasing competitiveness?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need to see which amenities are being used and which are not so I can inform capital decisions and differentiate the asset in leasing conversations.&rdquo;</div>
+        <p>Track utilization of shared amenity spaces using IoT, booking systems, or sensor data. Benchmark amenity usage against building occupancy. Surface underperforming amenities as a leasing competitiveness signal.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">IoT sensors; amenity booking platforms (HqO, Equiem, Comfy); building management systems</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Amenity utilization % by space type; booking rate trends; underperforming amenity flag</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">CBRE Host, HqO, Equiem, REKalibrate, custom IoT</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Requires amenity booking platform integration or IoT overlay</div></div>
+      </div>
+    </div>
+
+    <div class="acc req-card" data-mvp="yes" data-type="data" style="border-left:3px solid #003F2D">
+      <div class="acc-head" onclick="tog(this)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:4px">
+            <span style="font-size:11px;font-weight:600;color:#888;margin-right:4px">TL-009</span>
+            <span style="background:#003F2D;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">MVP</span>
+            <span style="background:#1F3864;color:#fff;font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px">Data</span>
+          </div>
+          <div class="acc-title">Access Control &amp; Keycard Data Integration (Kastle)</div>
+          <div class="acc-sub">Is tenant activity increasing, stable, or declining &mdash; and is a drop-off an early warning sign?</div>
+        </div>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M3 5.5L8 10.5L13 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="acc-body">
+        <div style="background:#fff;border-radius:6px;padding:10px 12px;margin-bottom:10px;border:0.5px solid rgba(0,0,0,0.08);font-style:italic;color:#444;font-size:13px">&ldquo;As an Asset Manager, I need keycard access data so I can understand actual building and suite usage patterns, particularly for assets where IoT sensors are not installed.&rdquo;</div>
+        <p>Ingest keycard / access control data from Kastle or equivalent. Show entry frequency by tenant suite, floor, and time of day. Flag significant drops in access activity as an early tenant risk signal.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data inputs</div><div style="font-size:12px;color:#444">Kastle access control system (API); HID / Lenel / other access control platforms; badge event logs</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Data outputs</div><div style="font-size:12px;color:#444">Access frequency by tenant / suite / floor; time-of-day heatmap; anomaly / drop-off alert</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Possible systems</div><div style="font-size:12px;color:#444">Kastle, HID, Lenel, custom</div></div>
+          <div style="background:#f5f5f0;border-radius:6px;padding:8px 10px"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#888;margin-bottom:4px">Personas</div><div style="font-size:12px;color:#444">Asset Manager &nbsp;&middot;&nbsp; Analyst / Associate</div></div>
+        </div>
+        <div style="margin-top:8px;padding:8px 10px;background:#FEF3E2;border-radius:6px;border:0.5px solid #BA7517"><div style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:#854F0B;margin-bottom:3px">Open question</div><div style="font-size:12px;color:#633806">Data availability depends on Kastle contract and client permission. Primary utilization proxy for non-IoT assets.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="page-footer">
   <p><strong>Polaris</strong> &middot; Operational Intelligence Framework &middot; Built for CBRE Asset Management</p>
-  <p style="margin-top:6px">Small &middot; Medium &middot; Large &mdash; directionally indicative, not prescriptive</p>
+  <p style="margin-top:6px">Small &middot; Medium &middot; Large &mdash; directionally indicative &middot; Requirements: Lease &amp; Space Strategy v1.0</p>
 </div>
 
 <script>
@@ -700,8 +626,19 @@ function scrollTo(id){
   var el=document.getElementById(id);
   if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
 }
+function filterReqs(filter, btn){
+  document.querySelectorAll('.req-filter-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  document.querySelectorAll('.req-card').forEach(function(card){
+    var show=true;
+    if(filter==='mvp') show=card.dataset.mvp==='yes';
+    else if(filter==='data') show=card.dataset.type==='data';
+    else if(filter==='functional') show=card.dataset.type==='functional';
+    card.style.display=show?'':'none';
+  });
+}
 window.addEventListener('scroll',function(){
-  var sections=['framework','artifacts','resourcing','program'];
+  var sections=['framework','artifacts','resourcing','program','requirements'];
   var links=document.querySelectorAll('.nav-link');
   var current='';
   sections.forEach(function(id){
