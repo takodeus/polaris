@@ -34,10 +34,17 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
 .main-content{flex:1;min-width:0;display:flex;flex-direction:column}
 
 /* HERO — section 00 */
-.hero{background:var(--green);padding:3.5rem 2.5rem 3rem}
-.hero-label{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem}
-.hero h1{font-family:Georgia,serif;font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:400;color:white;line-height:1.25;max-width:640px;margin-bottom:1.1rem}
-.hero p{font-size:14px;color:rgba(255,255,255,0.65);max-width:580px;line-height:1.7;font-family:Arial,sans-serif}
+.hero{background:linear-gradient(160deg,#00100b 0%,#001a11 40%,#003F2D 100%);padding:3.5rem 2.5rem 3rem;border-bottom:1px solid rgba(255,255,255,0.07)}
+.hero-label{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#BA7517;margin-bottom:1rem}
+.hero h1{font-family:Georgia,serif;font-size:clamp(1.4rem,2.5vw,2.1rem);font-weight:400;color:white;line-height:1.25;max-width:740px;margin-bottom:1.75rem}
+.hero p{font-size:14px;color:rgba(255,255,255,0.8);max-width:580px;line-height:1.7;font-family:Arial,sans-serif}
+.hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(0,0,0,0.08);border-radius:8px;overflow:hidden;margin-bottom:2rem}
+.hero-block{background:rgba(255,255,255,0.96);padding:1.25rem 1.5rem;border-top:2px solid transparent;border-radius:0}
+.hero-block-label{font-family:Arial,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:0.6rem}
+.hero-block-text{font-family:Arial,sans-serif;font-size:13px;color:#2a2a28;line-height:1.65}
+.hero-pullquote{border-left:2px solid #BA7517;padding:0.75rem 1.25rem;margin-top:0.5rem}
+.hero-pullquote p{font-family:Georgia,serif;font-size:15px;color:rgba(255,255,255,0.9);line-height:1.7;font-style:italic;max-width:740px}
+@media(max-width:768px){.hero-grid{grid-template-columns:1fr}}
 
 /* SECTIONS */
 .section{padding:3.5rem 2.5rem;contain:layout;display:block}
@@ -130,7 +137,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
 .swim-bot-label{font-family:Arial,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--olive);margin-bottom:4px}
 .swim-bot-title{font-family:Georgia,serif;font-size:18px;color:var(--green);margin-bottom:4px}
 .swim-bot-sub{font-family:Arial,sans-serif;font-size:13px;color:var(--text-muted);margin-bottom:1rem}
-.swim-bot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.swim-bot-cols{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:10px}
 .swim-bot-col{background:white;border:0.5px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px;font-family:Arial,sans-serif;font-size:12px;color:var(--text-mid);line-height:1.5}
 .swim-bot-col strong{display:block;font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px}
 
@@ -216,11 +223,65 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   .gate-row-1,.gate-row-2{grid-template-columns:1fr}
   .gate-empty{display:none}
 }
+
+/* ─── HAMBURGER + MOBILE NAV ──────────────────────────────── */
+.hamburger{
+  display:none;
+  position:fixed;top:14px;left:14px;z-index:300;
+  background:var(--green);border:none;border-radius:6px;
+  width:40px;height:40px;padding:0;cursor:pointer;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+}
+.hamburger span{
+  display:block;width:20px;height:2px;background:white;
+  border-radius:2px;transition:transform 0.2s,opacity 0.2s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.nav-backdrop{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);
+  z-index:150;opacity:0;transition:opacity 0.25s;
+}
+.nav-backdrop.visible{opacity:1}
+
+@media(max-width:768px){
+  body{flex-direction:column}
+  .hamburger{display:flex}
+  .sidebar{
+    position:fixed;left:-220px;top:0;height:100vh;z-index:200;
+    transition:left 0.25s ease;box-shadow:4px 0 20px rgba(0,0,0,0.15);
+  }
+  .sidebar.open{left:0}
+  .nav-backdrop{display:block}
+  .main-content{width:100%;padding-top:60px}
+  .hero{padding:2rem 1.25rem 1.75rem}
+  .section{padding:2.5rem 1.25rem}
+  .era-grid,.rev-grid,.swim-cards,.swim-bot-cols,.role-grid,.method-grid,.intel-grid{grid-template-columns:1fr}
+  .shift-bar{grid-template-columns:1fr}
+  .shift-arrow{display:none}
+  .gate-row-1,.gate-row-2{grid-template-columns:1fr}
+  .gate-empty{display:none}
+  .phase-row{grid-template-columns:1fr}
+  .chart-wrap{overflow-x:auto}
+  .era-grid{border-radius:var(--radius)}
+  .era-card{border-right:none;border-bottom:0.5px solid var(--border)}
+  .era-card:last-child{border-bottom:none}
+}
 </style>
 </head>
 <body>
 
-<aside class="sidebar">
+<!-- Mobile hamburger button -->
+<button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open navigation">
+  <span></span><span></span><span></span>
+</button>
+
+<!-- Mobile backdrop -->
+<div class="nav-backdrop" id="nav-backdrop" onclick="closeNav()"></div>
+
+<aside class="sidebar" id="sidebar">
   <a class="sidebar-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">CBRE</a>
   <nav class="sidebar-nav">
     <div class="nav-item" onclick="scrollToSection('hero')">
@@ -267,7 +328,30 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   <div class="hero" id="hero">
     <div class="hero-label">00 &middot; Introduction</div>
     <h1>Rebuilding Asset Management for the Agentic Era</h1>
-    <p>A strategic approach to building the activation layer between data infrastructure and business outcomes, enabling a new execution model built on prototype-first discovery, decision-centric design, workflow activation, and trusted adoption.</p>
+
+    <div class="hero-grid">
+
+      <div class="hero-block" style="border-top:3px solid #B4B2A9">
+        <div class="hero-block-label" style="color:#888;font-size:9px">Reality</div>
+        <div class="hero-block-text">Real estate service providers have built serious data infrastructure over the past decade. Systems are cleaner, reporting is faster, and more data is available than ever before. The investment has been real and the capability gains are genuine.</div>
+      </div>
+
+      <div class="hero-block" style="border-top:3px solid #BA7517">
+        <div class="hero-block-label" style="color:#854F0B;font-size:9px">Challenge</div>
+        <div class="hero-block-text">The nature of what intelligence means has shifted. The past decade was about velocity: more data, better data, faster. The next one is about context: richer, connected, inferrable. Audit-ready data answered the question "what happened." Agent-ready data answers "what should we do, and why, right now." Most firms are still building for the first question. The revenue model sitting on top of that data was designed for a world where labor was the scarce input and data was expensive to collect. Neither is true anymore. The new scarcity is not headcount and it is not data. It is the capacity to turn context into a decision at the moment it matters.</div>
+      </div>
+
+      <div class="hero-block" style="border-top:3px solid #003F2D">
+        <div class="hero-block-label" style="color:#003F2D;font-size:9px">Opportunity</div>
+        <div class="hero-block-text">CBRE has what most firms do not: proprietary data at scale, market relationships across every asset class, and client trust built over decades across both its operating and advisory businesses. The opportunity is to rebuild around intelligence delivery rather than labor deployment. The agentic infrastructure to do this exists. The knowledge graph to ground it can be built.</div>
+      </div>
+
+    </div>
+
+    <div class="hero-pullquote">
+      <p>Labor is no longer the scarce input. Data is no longer the scarce input. The new scarcity is context: connected, inferrable, delivered at the moment a decision must be made. Every real estate services firm is sitting on the same infrastructure problem. The data exists. The relationships exist. The question is who builds the layer that turns them into decisions. That is not a technology question. It is a strategic one.</p>
+    </div>
+
   </div>
 
   <div class="section" id="arbitrage">
@@ -626,7 +710,8 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   <div class="swim-mid" style="border-radius:0">
     <div class="swim-mid-label" style="font-size:11px;letter-spacing:0.12em;color:rgba(255,255,255,0.7);font-weight:800">MIDDLE LANE &middot; WHERE THE NEW WORK LIVES &middot; THE GAP NO ONE OWNS</div>
     <div class="swim-mid-title" style="font-size:26px;color:white;font-weight:400;margin-bottom:2px">The activation layer</div><div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:4px;font-style:italic">The middle is not the middle. It is the point.</div>
-    <div class="swim-mid-sub">Translating data infrastructure into business outcomes. No craft tradition exists here yet. This is the gap.</div>
+    <div class="swim-mid-sub">This is where programs fail. Organizations invest in the bottom lane and assume the middle follows. It does not follow automatically. The knowledge graph is inert until it is activated. Activation is not process mapping. It is not building workflows for humans to follow. It is designing agentic workflows: systems that monitor, reason, surface, and route without waiting for a person to pull a report.</div>
+    <div style="background:rgba(255,255,255,0.08);border-left:3px solid rgba(255,255,255,0.4);border-radius:0 4px 4px 0;padding:8px 12px;margin-bottom:1rem;font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,0.75);line-height:1.5"><strong style="color:white;display:block;margin-bottom:3px">The failure mode</strong> A well-configured Yardi. A BI dashboard with seventeen tabs. A reporting layer that took eighteen months to build. Still no change in how decisions get made. The bottom lane is complete. The middle was never built because no one asked: what does an agent need to know, in what form, to act on behalf of the advisor?</div>
     <div class="swim-mid-tags">
       <span class="swim-tag">Outcome engineering</span>
       <span class="swim-tag">Decision-centric design</span>
@@ -642,37 +727,37 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   <div class="swim-bot" style="border-radius:0 0 10px 10px">
     <div class="swim-bot-label">Bottom lane</div>
     <div class="swim-bot-title">Technical infrastructure</div>
-    <div class="swim-bot-sub">The foundation. Necessary but not sufficient. The activation layer cannot be built until this is stable.</div>
+    <div class="swim-bot-sub">The foundation. Necessary but not sufficient. Data infrastructure is not the same as a data layer. It is the precondition for activating the knowledge graph.</div>
     <div class="swim-bot-cols">
       <div class="swim-bot-col">
         <strong>Data sources</strong>
-        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Internal &amp; external. The raw material.</div>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Three tiers. All must be reachable.</div>
         <div style="display:flex;flex-direction:column;gap:4px">
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Internal:</span> Yardi, MRI, JDE, VTS, Excel, SharePoint, email</div>
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">External:</span> CoStar, CBRE EA benchmarks, market comps, regulatory feeds</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Internal:</span> Yardi, MRI, JDE, VTS, SharePoint</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Unstructured:</span> Excel, CSV files, PDFs, email threads. Data that lives outside systems.</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Third-party:</span> CoStar, TREPP, CBRE EA, market comps, regulatory feeds</div>
         </div>
       </div>
       <div class="swim-bot-col">
-        <strong>Meaning graph</strong>
-        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a taxonomy. A traversable graph of nodes, edges, and context.</div>
+        <strong>Knowledge graph</strong>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a taxonomy. Not a data dictionary. A traversable structure that encodes entities, relationships, and the context that makes inference possible.</div>
         <div style="display:flex;flex-direction:column;gap:4px">
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Nodes:</span> Assets, tenants, funds, obligations, people, clauses</div>
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Edges:</span> Relationships, triggers, authority, time dependencies</div>
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Context:</span> Who touches this, when, why, with what authority</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Nodes:</span> Assets, tenants, funds, leases, obligations, people, clauses</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Edges:</span> Relationships, triggers, authority lines, time dependencies</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Context:</span> Who touches this entity, when, why, and with what authority. The graph carries it all.</div>
         </div>
       </div>
       <div class="swim-bot-col">
         <strong>Integration hub</strong>
-        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not just data movement. Decision lineage and meaning preservation.</div>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a data pipeline. The mechanism by which decision lineage is created and meaning is preserved as signals move upward.</div>
         <div style="display:flex;flex-direction:column;gap:4px">
           <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Connect:</span> Existing systems without replacing them</div>
           <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Preserve:</span> Intent and meaning as data moves between layers</div>
-          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Trace:</span> Every recommendation back to its source data and logic</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Trace:</span> Every recommendation back to its source, so the advisor can explain why</div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 <!-- 05 ARTIFACTS -->
 
@@ -1067,9 +1152,11 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   </div>
 </div>
 </div>
+</div>
 
 <script>
 function scrollToSection(id) {
+  if (window.innerWidth <= 768) closeNav();
   var el = document.getElementById(id);
   if (!el) return;
   var sidebar = document.querySelector('.sidebar');
@@ -1107,6 +1194,30 @@ window.addEventListener('scroll', function() {
     item.classList.toggle('active', current !== '' && onclick.indexOf("'" + current + "'") > -1);
   });
 });
+
+function toggleNav() {
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('nav-backdrop');
+  var hamburger = document.getElementById('hamburger');
+  var isOpen = sidebar.classList.contains('open');
+  if (isOpen) {
+    closeNav();
+  } else {
+    sidebar.classList.add('open');
+    backdrop.classList.add('visible');
+    hamburger.classList.add('open');
+  }
+}
+
+function closeNav() {
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('nav-backdrop');
+  var hamburger = document.getElementById('hamburger');
+  sidebar.classList.remove('open');
+  backdrop.classList.remove('visible');
+  hamburger.classList.remove('open');
+}
+
 </script>
 </body>
 </html>
