@@ -8,18 +8,44 @@
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-logo"><span>CBRE</span></div>
-  <span class="nav-link" onclick="scrollToSection('arbitrage')">Competitive thesis</span>
-  <span class="nav-link" onclick="scrollToSection('revenue')">New Revenue model</span>
-  <span class="nav-link" onclick="scrollToSection('argument')">The Pivot</span>
-  <span class="nav-link" onclick="scrollToSection('framework')">Next-Gen Framework</span>
-  <span class="nav-link" onclick="scrollToSection('artifacts')">Agent-Ready Artifacts</span>
-  <span class="nav-link" onclick="scrollToSection('resourcing')">Resourcing for Tomorrow</span>
-  <span class="nav-link" onclick="scrollToSection('program')">Program Structure</span>
-  <span class="nav-link" onclick="scrollToSection('requirements')">Requirements</span>
-</nav>
-
+<aside class="sidebar">
+  <a class="sidebar-logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">CBRE</a>
+  <nav class="sidebar-nav">
+    <div class="nav-item active" onclick="scrollToSection('arbitrage')">
+      <span class="nav-num">01</span>
+      <span class="nav-label">Competitive thesis</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('revenue')">
+      <span class="nav-num">02</span>
+      <span class="nav-label">New revenue model</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('argument')">
+      <span class="nav-num">03</span>
+      <span class="nav-label">The pivot</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('framework')">
+      <span class="nav-num">04</span>
+      <span class="nav-label">Next-gen framework</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('artifacts')">
+      <span class="nav-num">05</span>
+      <span class="nav-label">Agent-ready artifacts</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('resourcing')">
+      <span class="nav-num">06</span>
+      <span class="nav-label">Resourcing for tomorrow</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('program')">
+      <span class="nav-num">07</span>
+      <span class="nav-label">Program structure</span>
+    </div>
+    <div class="nav-item" onclick="scrollToSection('requirements')">
+      <span class="nav-num">08</span>
+      <span class="nav-label">Requirements</span>
+    </div>
+  </nav>
+</aside>
+<div class="main-content">
 <div class="hero">
   <h1>Rebuilding Asset Management for the Agentic Era</h1>
   <p>A strategic approach to building the activation layer between data infrastructure and business outcomes, enabling a new execution model built on prototype-first discovery, decision-centric design, workflow activation, and trusted adoption.</p>
@@ -287,9 +313,9 @@
       <div class="swim-card"><div class="swim-card-title">Become indispensable</div><div class="swim-card-sub">Advice clients cannot replicate internally</div></div>
     </div>
   </div>
-  <div class="swim-connector">
-    <span>signal &uarr;</span>
-    <span>&darr; intent</span>
+  <div class="swim-connector-band">
+    <span class="swim-conn-left">&#8593; signal</span>
+    <span class="swim-conn-right">intent &#8595;</span>
   </div>
   <div class="swim-mid" style="border-radius:0">
     <div class="swim-mid-label">Middle lane &middot; Where the new work lives</div>
@@ -303,9 +329,9 @@
       <span class="swim-tag">Agent orchestration</span>
     </div>
   </div>
-  <div class="swim-connector">
-    <span>data &uarr;</span>
-    <span>&darr; signal</span>
+  <div class="swim-connector-band">
+    <span class="swim-conn-left">&#8593; data</span>
+    <span class="swim-conn-right">signal &#8595;</span>
   </div>
   <div class="swim-bot" style="border-radius:0 0 10px 10px">
     <div class="swim-bot-label">Bottom lane</div>
@@ -493,7 +519,9 @@
   <div class="section-title">Small, medium, large</div>
   <div class="section-sub">Three phases with explicit gates. You are only asked to approve the next phase, not the full program.</div>
 
-  <div class="phase-grid">
+  <div class="phases">
+
+  <div class="phase-row">
     <div class="phase">
       <div class="phase-bar" style="background:#B4B2A9"></div>
       <div class="phase-label">Phase 01</div>
@@ -504,7 +532,6 @@
         <li>Prototype sprint: working software against real data, not a wireframe or a demo environment</li>
         <li>What we are not doing: no RFP, no vendor selection, no big-bang commitment</li>
       </ul>
-      <div class="gate-pill">Gate 1: working prototype + stakeholder reaction</div>
     </div>
     <div class="phase">
       <div class="phase-bar" style="background:#378ADD"></div>
@@ -517,7 +544,6 @@
         <li>Pilot cohort embedded in live work, not a lab</li>
         <li>Change management tracks running from day one across executives, operators, and legacy IT</li>
       </ul>
-      <div class="gate-pill">Gate 2: adoption rate + decision accuracy</div>
     </div>
     <div class="phase">
       <div class="phase-bar" style="background:#003F2D"></div>
@@ -528,12 +554,45 @@
         <li>Agent-ready data layer live across managed portfolio</li>
         <li>Outcome engineers embedded in client-facing teams</li>
         <li>The 60/40 inversion measurable: advisors spending more time advising</li>
-        <li>COE stood up and owned internally</li>
+        <li>VCO stood up and owned internally</li>
         <li>The trusted advisor transition: the operator-to-advisor shift is now measurable</li>
       </ul>
-      <div class="gate-pill">Scale: COE + operator-to-advisor measurable</div>
     </div>
   </div>
+
+  <div class="gate-row-1">
+    <div class="gate">
+      <div class="gate-icon">
+        <div class="gate-post-left"></div>
+        <div class="gate-post-right"></div>
+        <div class="gate-bar"></div>
+        <div class="gate-arrow">&#8595;</div>
+      </div>
+      <div class="gate-text">
+        <div class="gate-label">Gate 1: working prototype + stakeholder reaction</div>
+        <div class="gate-sub">Proceed / pivot / stop. No deck, no requirements doc.</div>
+      </div>
+    </div>
+    <div class="gate-empty"></div>
+  </div>
+
+  <div class="gate-row-2">
+    <div class="gate-empty"></div>
+    <div class="gate">
+      <div class="gate-icon">
+        <div class="gate-post-left"></div>
+        <div class="gate-post-right"></div>
+        <div class="gate-bar"></div>
+        <div class="gate-arrow">&#8595;</div>
+      </div>
+      <div class="gate-text">
+        <div class="gate-label">Gate 2: adoption rate + decision accuracy</div>
+        <div class="gate-sub">Expand / contract. Measured in live work, not a lab.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
   <div class="acc-group">
     <div class="acc">
@@ -544,7 +603,7 @@
       <div class="acc-body">
         <p style="margin-bottom:8px"><span class="tag" style="background:#B4B2A9;color:white">Small</span> Frame the burning platform, not "cool technology" but "cost of not moving." Secure budget for the capability audit and prototype sprint as a learning investment, not a program commitment.</p>
         <p style="margin-bottom:8px"><span class="tag" style="background:#378ADD;color:white">Medium</span> Protect the pilot cohort from being pulled back into BAU. Their time is the program's most scarce resource.</p>
-        <p><span class="tag" style="background:#003F2D;color:white">Large</span> Champion the COE model internally. The ROI is in the operator-to-advisor ratio, not in cost reduction alone.</p>
+        <p><span class="tag" style="background:#003F2D;color:white">Large</span> Champion the VCO model internally. The ROI is in the operator-to-advisor ratio, not in cost reduction alone.</p>
       </div>
     </div>
     <div class="acc">
@@ -577,8 +636,7 @@
   <div class="section-title">Operationalizing Asset Management Strategy</div>
   <div class="section-sub">Requirements are scoped for MVP. Each is anchored to the decision the asset manager must make, not the feature they requested.</div>
 
-  <div class="stat-row">
-    <div class="stat-cell"><div class="stat-num">9</div><div class="stat-lbl">Total</div></div>
+  <div class="stat-lbl">Total</div></div>
     <div class="stat-cell"><div class="stat-num">8</div><div class="stat-lbl">MVP</div></div>
     <div class="stat-cell"><div class="stat-num">4</div><div class="stat-lbl">Data</div></div>
     <div class="stat-cell"><div class="stat-num">5</div><div class="stat-lbl">Functional</div></div>
@@ -680,11 +738,9 @@
   </div>
 </div>
 
-<div class="page-footer">
-  <p><strong>Rebuilding Asset Management for the Agentic Era</strong> &middot; CBRE</p>
-  <p style="margin-top:6px">Small &middot; Medium &middot; Large: directionally indicative</p>
-</div>
 
+
+</div>
 <script src="app.js"></script>
 </body>
 </html>
