@@ -247,17 +247,25 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
 .nav-backdrop.visible{opacity:1}
 
 @media(max-width:768px){
-  body{flex-direction:column}
+  body{display:block}
   .hamburger{display:flex}
   .sidebar{
-    position:fixed;left:-220px;top:0;height:100vh;z-index:200;
+    position:fixed;left:-240px;top:0;height:100vh;z-index:200;
     transition:left 0.25s ease;box-shadow:4px 0 20px rgba(0,0,0,0.15);
+    width:220px;
   }
   .sidebar.open{left:0}
   .nav-backdrop{display:block}
-  .main-content{width:100%;padding-top:60px}
-  .hero{padding:2rem 1.25rem 1.75rem}
-  .section{padding:2.5rem 1.25rem}
+  .main-content{
+    display:block;
+    width:100%;
+    min-width:0;
+    padding-top:56px;
+  }
+  .hero{padding:2rem 1.1rem 1.75rem}
+  .hero h1{font-size:1.4rem}
+  .hero-grid{grid-template-columns:1fr;gap:1px}
+  .section{padding:2rem 1.1rem}
   .era-grid,.rev-grid,.swim-cards,.swim-bot-cols,.role-grid,.method-grid,.intel-grid{grid-template-columns:1fr}
   .shift-bar{grid-template-columns:1fr}
   .shift-arrow{display:none}
@@ -268,6 +276,11 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   .era-grid{border-radius:var(--radius)}
   .era-card{border-right:none;border-bottom:0.5px solid var(--border)}
   .era-card:last-child{border-bottom:none}
+  .swim-mid-tags{gap:6px}
+  .swim-tag{font-size:10px;padding:3px 10px}
+  .section-title{font-size:1.3rem}
+  table{font-size:11px}
+  .hero-pullquote p{font-size:13px}
 }
 </style>
 </head>
@@ -740,7 +753,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
       </div>
       <div class="swim-bot-col">
         <strong>Knowledge graph</strong>
-        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a data dictonary. A traversable structure that encodes entities, relationships, and the context that makes inference possible.</div>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a data dictionary. A traversable structure that encodes entities, relationships, and the context that makes inference possible.</div>
         <div style="display:flex;flex-direction:column;gap:4px">
           <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Nodes:</span> Assets, tenants, funds, leases, obligations, people, clauses</div>
           <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Edges:</span> Relationships, triggers, authority lines, time dependencies</div>
