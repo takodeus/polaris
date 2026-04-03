@@ -539,8 +539,8 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
     <span class="swim-conn-right">intent &#8595;</span>
   </div>
   <div class="swim-mid" style="border-radius:0">
-    <div class="swim-mid-label">Middle lane &middot; Where the new work lives</div>
-    <div class="swim-mid-title">The activation layer</div>
+    <div class="swim-mid-label" style="font-size:11px;letter-spacing:0.12em;color:rgba(255,255,255,0.7);font-weight:800">MIDDLE LANE &middot; WHERE THE NEW WORK LIVES &middot; THE GAP NO ONE OWNS</div>
+    <div class="swim-mid-title" style="font-size:26px;color:white;font-weight:400;margin-bottom:2px">The activation layer</div><div style="font-family:Arial,sans-serif;font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:4px;font-style:italic">The middle is not the middle. It is the point.</div>
     <div class="swim-mid-sub">Translating data infrastructure into business outcomes. No craft tradition exists here yet. This is the gap.</div>
     <div class="swim-mid-tags">
       <span class="swim-tag">Outcome engineering</span>
@@ -559,9 +559,32 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
     <div class="swim-bot-title">Technical infrastructure</div>
     <div class="swim-bot-sub">The foundation. Necessary but not sufficient. The activation layer cannot be built until this is stable.</div>
     <div class="swim-bot-cols">
-      <div class="swim-bot-col"><strong>Data sources</strong>Yardi, MRI, JDE, VTS, Excel, SharePoint, email</div>
-      <div class="swim-bot-col"><strong>Ontology</strong>Entity model, meaning graph, governed vocabulary</div>
-      <div class="swim-bot-col"><strong>Integration hub</strong>Connect what exists. Do not replace it.</div>
+      <div class="swim-bot-col">
+        <strong>Data sources</strong>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Internal &amp; external. The raw material.</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Internal:</span> Yardi, MRI, JDE, VTS, Excel, SharePoint, email</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">External:</span> CoStar, CBRE EA benchmarks, market comps, regulatory feeds</div>
+        </div>
+      </div>
+      <div class="swim-bot-col">
+        <strong>Meaning graph</strong>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not a taxonomy. A traversable graph of nodes, edges, and context.</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Nodes:</span> Assets, tenants, funds, obligations, people, clauses</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Edges:</span> Relationships, triggers, authority, time dependencies</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Context:</span> Who touches this, when, why, with what authority</div>
+        </div>
+      </div>
+      <div class="swim-bot-col">
+        <strong>Integration hub</strong>
+        <div style="margin-top:6px;font-size:11px;color:#888;font-family:Arial,sans-serif;margin-bottom:8px">Not just data movement. Decision lineage and meaning preservation.</div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Connect:</span> Existing systems without replacing them</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Preserve:</span> Intent and meaning as data moves between layers</div>
+          <div style="background:#f0f0ea;border-radius:4px;padding:4px 8px;font-size:11px;color:#555;font-family:Arial,sans-serif"><span style="color:#003F2D;font-weight:700">Trace:</span> Every recommendation back to its source data and logic</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -575,7 +598,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
 
   <div class="acc-group">
 
-    <div class="acc open">
+    <div class="acc">
       <div class="acc-header" onclick="tog(this)">
         <div><div class="acc-title">Data readiness: audit-ready vs. agent-ready</div><div class="acc-sub">The most fundamental shift in the entire program</div></div>
         <div class="acc-icon">&#8963;</div>
