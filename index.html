@@ -282,9 +282,35 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   table{font-size:11px}
   .hero-pullquote p{font-size:13px}
 }
+
+.gate{position:fixed;inset:0;background:#003F2D;display:flex;align-items:center;justify-content:center;z-index:9999}
+.gate-box{background:white;border-radius:12px;padding:2.5rem 2rem;width:320px;text-align:center}
+.gate-logo{font-family:"Arial Black",Arial,sans-serif;font-size:22px;font-weight:900;color:#003F2D;margin-bottom:0.5rem}
+.gate-title{font-family:Georgia,serif;font-size:15px;color:#444;margin-bottom:1.5rem;line-height:1.4}
+.gate-input{width:100%;padding:10px 14px;border:0.5px solid rgba(0,0,0,0.2);border-radius:6px;font-size:14px;font-family:Arial,sans-serif;outline:none;margin-bottom:10px;box-sizing:border-box}
+.gate-input:focus{border-color:#003F2D;box-shadow:0 0 0 2px rgba(0,63,45,0.1)}
+.gate-btn{width:100%;padding:10px;background:#003F2D;color:white;border:none;border-radius:6px;font-size:14px;font-weight:700;font-family:Arial,sans-serif;cursor:pointer;letter-spacing:0.04em}
+.gate-btn:hover{background:#004d38}
+.gate-error{font-family:Arial,sans-serif;font-size:12px;color:#A32D2D;margin-top:8px;display:none}
+.gate-hint{font-family:Arial,sans-serif;font-size:11px;color:#aaa;margin-top:12px}
 </style>
 </head>
 <body>
+
+
+<div class="gate" id="gate">
+  <div class="gate-box">
+    <div class="gate-logo">CBRE</div>
+    <div class="gate-title">Project Polaris</div>
+    <div style="position:relative">
+      <input class="gate-input" type="password" id="gate-input" placeholder="Enter access code" onkeydown="if(event.key='Enter')checkPass()" style="padding-right:44px"/>
+      <button onclick="toggleShow()" id="show-btn" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-family:Arial,sans-serif;font-size:11px;color:#aaa;padding:0;letter-spacing:0.03em">show</button>
+    </div>
+    <button class="gate-btn" onclick="checkPass()">Access document</button>
+    <div class="gate-error" id="gate-error">Incorrect access code</div>
+    <div class="gate-hint">Request access: <a href="mailto:Julie.Miner@cbre.com" style="color:#003F2D;text-decoration:none;font-weight:600">Julie.Miner@cbre.com</a></div>
+  </div>
+</div>
 
 <!-- Mobile hamburger button -->
 <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Open navigation">
@@ -388,7 +414,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
         <span style="color:#ccc">&rarr;</span>
         <span class="era-role-after" style="color:#003F2D">Evidence-backed Advisor</span>
       </div>
-      <div class="era-callout" style="background:#f5f5f0;color:#888">The relationship is the constant. Every era changes how the relationship deepens and widens.</div>
+      <div class="era-callout" style="background:#f5f5f0;color:#888">The relationship is the constant. Every era changes what you bring to it, not whether it matters.</div>
     </div>
 
     <div class="era-card">
@@ -405,7 +431,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
         <span style="color:#ccc">&rarr;</span>
         <span class="era-role-after" style="color:#0C447C">Platform Operator</span>
       </div>
-      <div class="era-callout" style="background:#E6F1FB;color:#0C447C">The stack compressed the operator role but did not eliminate it. What was strategic has become commoditized. The value goal posts keep moving out.</div>
+      <div class="era-callout" style="background:#E6F1FB;color:#0C447C">The stack compressed the operator role but did not eliminate it. The work moved up a level. It did not move out.</div>
     </div>
 
     <div class="era-card">
@@ -423,7 +449,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
         <span style="color:#ccc">&rarr;</span>
         <span class="era-role-after" style="color:#003F2D">Trusted advisor, agent-backed</span>
       </div>
-      <div class="era-callout" style="background:#EAF3DE;color:#27500A;border:0.5px solid #97C459">The category champion will be the one that holds relationships above and below the asset simultaneously: in property management and facilities, in leasing and advisory, in capital markets. Building the intelligence layer that connects them all.</div>
+      <div class="era-callout" style="background:#EAF3DE;color:#27500A;border:0.5px solid #97C459">No outsourced AM firm has made this transition at scale. The category is open. The winner will be the one that holds relationships above and below the asset simultaneously: in property management and facilities, in leasing and advisory, in capital markets. Building the intelligence layer that connects them all.</div>
     </div>
 
   </div>
@@ -1177,7 +1203,7 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
   <div class="section" id="program">
     <div class="section-label">07 &middot; Program Structure</div>
   <div class="section-title">Small, medium, large</div>
-  <div class="section-sub">Three phases with explicit decision gates. Three lanes with explicit roles and scopes.</div>
+  <div class="section-sub">Three phases with explicit gates. You are only asked to approve the next phase, not the full program.</div>
 
   <div class="phases">
 
@@ -1297,10 +1323,10 @@ body{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.7;
         <div class="acc-icon">&#8963;</div>
       </div>
       <div class="acc-body">
-        <p style="margin-bottom:10px">D&amp;T's role is not only to buy or build (or both) a new platform. It is to make the existing stack connected and contextualized: Yardi, MRI, JDE, VTS, SharePoint, Excel. The goal is to ensure the knowledge graph preserves decision lineage as data is in motion.</p>
-        <p style="margin-bottom:8px"><span class="tag" style="background:#B4B2A9;color:white">Phase 01</span> Involved from the capability audit onward. Their knowledge of where the data actually lives, what the field names mean, where the reconciliation breaks happen, and which systems are authoritative is irreplaceable.</p>
-        <p style="margin-bottom:8px"><span class="tag" style="background:#378ADD;color:white">Phase 02</span> The connective tissue connects what exists. It does not replace the internal or external Yardi instance or the MRI database. The person who built the load-bearing Excel model becomes an architect, not a casualty. That framing matters for retention and for the quality of what gets built.</p>
-        <p><span class="tag" style="background:#003F2D;color:white">Phase 03</span> Ongoing ownership of the data layer (governance, refresh cadence, source of record decisions) transfers to D&amp;T as a permanent operational function, not a project deliverable. The intelligence layer is only as good as the knowledge flowing into it.</p>
+        <p style="margin-bottom:10px">D&amp;T's role is not to build a new platform. It is to make the existing stack connectable: Yardi, MRI, JDE, VTS, SharePoint, Excel. The goal is to ensure the integration hub preserves decision lineage as data moves between layers. The knowledge graph cannot be populated without them.</p>
+        <p style="margin-bottom:8px"><span class="tag" style="background:#B4B2A9;color:white">Phase 01</span> Involved from the capability audit onward. Their knowledge of where the data actually lives, what the field names mean, where the reconciliation breaks happen, and which systems are authoritative is irreplaceable. No external consultant has it.</p>
+        <p style="margin-bottom:8px"><span class="tag" style="background:#378ADD;color:white">Phase 02</span> The integration hub connects to what exists. It does not replace the Yardi instance or the MRI database. The person who built the load-bearing Excel model becomes an architect, not a casualty. That framing matters for retention and for the quality of what gets built.</p>
+        <p><span class="tag" style="background:#003F2D;color:white">Phase 03</span> Ongoing ownership of the data layer (governance, refresh cadence, source of record decisions) transfers to D&amp;T as a permanent operational function, not a project deliverable. The intelligence layer is only as good as the data flowing into it.</p>
       </div>
     </div>
 
@@ -1477,6 +1503,38 @@ function closeNav() {
   sidebar.classList.remove('open');
   backdrop.classList.remove('visible');
   hamburger.classList.remove('open');
+}
+
+
+(function(){
+  var h = sessionStorage.getItem('polaris_auth');
+  if(h === 'ok') { document.getElementById('gate').style.display='none'; return; }
+  document.getElementById('gate').style.display='flex';
+})();
+
+function toggleShow(){
+  var inp = document.getElementById('gate-input');
+  var btn = document.getElementById('show-btn');
+  if(inp.type === 'password'){
+    inp.type = 'text';
+    btn.textContent = 'hide';
+  } else {
+    inp.type = 'password';
+    btn.textContent = 'show';
+  }
+}
+
+function checkPass(){
+  var val = document.getElementById('gate-input').value.trim().toLowerCase();
+  var accepted = ['_10Signals','takodeus'];
+  if(accepted.indexOf(val) > -1){
+    sessionStorage.setItem('polaris_auth','ok');
+    document.getElementById('gate').style.display='none';
+  } else {
+    document.getElementById('gate-error').style.display='block';
+    document.getElementById('gate-input').value='';
+    document.getElementById('gate-input').focus();
+  }
 }
 
 </script>
