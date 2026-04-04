@@ -1526,7 +1526,7 @@ function toggleShow(){
 
 function checkPass(){
   var val = document.getElementById('gate-input').value.trim().toLowerCase();
-  var accepted = ['tensignals','takodeus'];
+  var accepted = ['10signals','takodeus','tensignals'];
   if(accepted.indexOf(val) > -1){
     sessionStorage.setItem('polaris_auth','ok');
     document.getElementById('gate').style.display='none';
